@@ -1,0 +1,27 @@
+#pickup {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 100px;
+}
+
+#pickup td,
+#pickup th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#pickup tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#pickup tr:hover {
+  background-color: #ddd;
+}
+
+#pickup th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f0273b;
+  color: white;
+}

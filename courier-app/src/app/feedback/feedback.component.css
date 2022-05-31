@@ -1,0 +1,85 @@
+body {
+  background-color: #f0273b;
+  margin-top: -20px;
+}
+.heading {
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+}
+.name {
+  color: #dddddd;
+  font-weight: bold;
+  text-align: center;
+}
+span {
+  color: #f0273b;
+}
+.text {
+  color: #f0273b;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 2px;
+  margin-left: 700px;
+  margin: 20px 0 30px;
+  text-align: center;
+}
+.container {
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-bottom: 90px;
+  margin-top: 50px;
+  padding: 50px;
+  width: 800px;
+}
+label {
+  color: #dddddd;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  background: #f1f1f1;
+  border: #f1f1f1;
+  border: none;
+  display: inline-block;
+  margin: 5px 0 22px 0;
+  padding: 15px;
+  width: 100%;
+}
+div {
+  padding: 10px 0;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #ca303f;
+  border: 1px solid #ca303f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 8px 0;
+  opacity: 0.9;
+  padding: 16px 20px;
+  width: 100%;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+select {
+  background: #f1f1f1;
+  border: #f1f1f1;
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px 0 22px 0;
+  padding: 15px;
+  width: 100%;
+
+  /*    */
+}
+.count {
+  color: #dddddd;
+}

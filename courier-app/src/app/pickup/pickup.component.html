@@ -1,0 +1,178 @@
+<div class="pickup">
+  <h1 class="logo">MIGRATE<span>SMART</span></h1>
+  <p class="txt">a parcel and courier compant</p>
+  <div class="main">
+    <h2 class="heading">REQUEST YOUR PICKUP</h2>
+    <p class="text">
+      Try out MIGRATE<span>SMART</span> today and be ready to ship in minutes.
+    </p>
+    <div class="part1">
+      <div class="container">
+        <form
+          [formGroup]="pickupForm"
+          (ngSubmit)="register(this.pickupForm.value)"
+        >
+          <div class="form-group">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Name" formControlName="name" />
+
+            <span
+              class="text-danger"
+              *ngIf="
+                pickupForm.controls.name.errors &&
+                pickupForm.controls.name.touched
+              "
+              ><br />Invalid Name</span
+            >
+          </div>
+
+          <div class="form-group">
+            <i class="fa fa-envelope"></i>
+            <input type="text" placeholder="Email" formControlName="email" />
+            <span
+              class="text-danger"
+              *ngIf="
+                pickupForm.controls.email.errors &&
+                pickupForm.controls.email.touched
+              "
+              ><br />Invalid Email</span
+            >
+          </div>
+
+          <div class="form-group">
+            <i class="fa fa-phone"></i>
+            <input
+              type="text"
+              placeholder="Mobile Number"
+              formControlName="mobile"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                pickupForm.controls.mobile.errors &&
+                pickupForm.controls.mobile.touched
+              "
+              ><br />Invalid Mobile Number</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="fromplace"></label>
+            <i class="fa fa-home"></i>
+            <input
+              type="text"
+              placeholder="Pickup From"
+              formControlName="fromplace"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                pickupForm.controls.fromplace.errors &&
+                pickupForm.controls.fromplace.touched
+              "
+              ><br />Invalid Place Name</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="toplace"></label>
+            <i class="fa fa-search"></i>
+            <input
+              type="text"
+              placeholder="Pickup To"
+              formControlName="toplace"
+            />
+            <span
+              class="text-danger"
+              *ngIf="
+                pickupForm.controls.toplace.errors &&
+                pickupForm.controls.toplace.touched
+              "
+              ><br />Invalid Place Name</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="date"></label>
+            <i class="fa fa-calendar"></i>
+            <input type="text" placeholder="Date" formControlName="date" />
+            <span
+              class="text-danger"
+              *ngIf="
+                pickupForm.controls.date.errors &&
+                pickupForm.controls.date.touched
+              "
+              ><br />Invalid Date</span
+            >
+          </div>
+
+          <button id="submitButton" type="submit" class="btn">Register</button>
+
+          <button id="orderButton" type="submit" class="btn">
+            Previous orders
+          </button>
+        </form>
+      </div>
+
+      <div class="container-right">
+        <h2>
+          <span>Supercharging Growth</span> for 75,000+ online sellers and
+          brands
+        </h2>
+        <div class="parts">
+          <div class="parts1">
+            Quickest delivery in 29,000 pin-codes across India.
+          </div>
+          <div class="parts2">
+            RTO reduction tool to help reduce RTO by 20%.
+          </div>
+          <div class="parts3">
+            Improve business cashflow cycle with Daily COD payments.
+          </div>
+          <div class="parts4">Best rated customer support in the Industry.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="part2">
+    <h2 class="heading2">Brands That Trust Us</h2>
+    <div class="imgs">
+      <div class="img">
+        <img src="../../images/img1.png" />
+      </div>
+      <div class="img">
+        <img src="../../images/img2.png" />
+      </div>
+      <div class="img">
+        <img src="../../images/img3.png" />
+      </div>
+      <div class="img">
+        <img src="../../images/img4.png" />
+      </div>
+      <div class="img">
+        <img src="../../images/img5.png" />
+      </div>
+    </div>
+  </div>
+
+  <div class="part3">
+    <div class="left">
+      <img class="image-1" src="../../images/globe.png" />
+    </div>
+    <div class="right">
+      <h2 class="heading3">Reach customers across the world</h2>
+      <div class="right-text">
+        <p class="text3">
+          With our tie-ups with 17+ courier partners, your business gets the
+          widest reach and highest delivery rates.
+        </p>
+        <p class="text3">
+          Without writing a line of code, you can integrate all your online
+          business channels with PICKRR dashboard. It is that simple!
+        </p>
+      </div>
+    </div>
+  </div>
+  <h2 class="end">Start shipping with MIGRATE<span>SMART</span> for free</h2>
+</div>

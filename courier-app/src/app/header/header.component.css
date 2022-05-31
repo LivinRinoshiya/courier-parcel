@@ -1,0 +1,60 @@
+.navbar {
+  position: relative;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  /* position: absolute; */
+}
+.smart {
+  color: #f0273b;
+}
+
+.migrate {
+  color: rgb(243, 235, 235);
+  margin-top: 33px;
+  margin-left: 40px;
+}
+
+.text {
+  color: #fc283d;
+  margin-top: -14px;
+  padding-left: 140px;
+}
+#navlist {
+  list-style: none;
+  display: flex;
+  padding: 25px;
+  margin-left: 250px;
+  background: black;
+  text-decoration: none;
+}
+
+#navlist li {
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+a {
+  color: #fff;
+}
+
+#list {
+  text-decoration: none;
+}
+
+#navlist a:hover {
+  color: #f0273b;
+}
+
+@media all and (max-width: 500px) {
+  .navbar {
+    padding: 1.6em;
+  }
+
+  #navlist {
+    flex-direction: column;
+    display: none;
+  }
+}

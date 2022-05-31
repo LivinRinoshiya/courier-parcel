@@ -1,0 +1,225 @@
+<div class="main">
+  <h3 class="sub-heading">HAVE SOMETHING TO SHARE?</h3>
+  <h1 class="main-heading">CONTACT US</h1>
+</div>
+<div class="container">
+  <div class="top-container">
+    <p class="text1">
+      For enquiries and feedback, call our Customer Care on:<span
+        ><a href="#"> +91 (020) 4911 6100</a>
+      </span>
+      or <span> <a href="#">customercare@migratesmart.com</a></span>
+    </p>
+
+    <p class="text2">
+      <span><i class="fa fa-phone"></i> Click Here</span> to get callback from
+      our agent.
+    </p>
+  </div>
+  <div class="form-container">
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="register(this.contactForm.value)"
+    >
+      <div class="form-group">
+        <i class="fa fa-envelope"></i>
+        <input
+          type="text"
+          placeholder="Feedback related to ?"
+          formControlName="subject"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            contactForm.controls.subject.errors &&
+            contactForm.controls.subject.touched
+          "
+          ><br />Invalid data</span
+        >
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder="Name" formControlName="name" />
+
+        <span
+          class="text-danger"
+          *ngIf="
+            contactForm.controls.name.errors &&
+            contactForm.controls.name.touched
+          "
+          ><br />Invalid Name</span
+        >
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-phone"></i>
+        <input
+          type="text"
+          placeholder="Mobile Number"
+          formControlName="mobile"
+        />
+        <span
+          class="text-danger"
+          *ngIf="
+            contactForm.controls.mobile.errors &&
+            contactForm.controls.mobile.touched
+          "
+          ><br />Invalid Mobile Number</span
+        >
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-envelope"></i>
+        <input type="text" placeholder="Email" formControlName="email" />
+        <span
+          class="text-danger"
+          *ngIf="
+            contactForm.controls.email.errors &&
+            contactForm.controls.email.touched
+          "
+          ><br />Invalid Email</span
+        >
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-home"></i>
+        <input type="text" placeholder="City" formControlName="place" />
+        <span
+          class="text-danger"
+          *ngIf="
+            contactForm.controls.place.errors &&
+            contactForm.controls.place.touched
+          "
+          ><br />Invalid Place Name</span
+        >
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-home"></i>
+        <input type="text" placeholder="Feedback" formControlName="feedback" />
+        <span
+          class="text-danger"
+          *ngIf="
+            contactForm.controls.feedback.errors &&
+            contactForm.controls.feedback.touched
+          "
+          ><br />Invalid Details</span
+        >
+      </div>
+
+      <div class="text-center">
+        <button id="submitButton" type="submit" class="btn">submit</button>
+      </div>
+
+      <!-- <div class="text-center text-success" *ngIf="successMessage">
+          {{ successMessage }}
+        </div> -->
+    </form>
+  </div>
+</div>
+
+<div class="office">
+  <h1 class="heading2">Office Locations</h1>
+  <div class="head">
+    <h3>Head Office</h3>
+    <p>
+      Building# B1, Kumar Cerebrum IT Park, Kalyani Nagar, Pune, Maharashtra -
+      411014
+    </p>
+    <p>Phone: +91 (020) 4911 1900 (Board number)</p>
+  </div>
+
+  <div class="part1">
+    <div class="north">
+      <h4>North Regional Office</h4>
+      <ul>
+        <li>Mustatil No.16,</li>
+        <li>Kila No.4/2, Village Samalkha,</li>
+        <li>Near Telephone Exchange,</li>
+        <li>New Delhi - 110037</li>
+      </ul>
+    </div>
+
+    <div class="east">
+      <h4>East Regional Office</h4>
+      <ul>
+        <li>Unit 8, 3rd Floor,</li>
+        <li>Raikva Building,</li>
+        <li>3A Ram Mohan Mullick Road,</li>
+        <li>EM Bypass, Kolkata,</li>
+        <li>West Bengal - 700010</li>
+      </ul>
+    </div>
+
+    <div class="north-east">
+      <h4>North East Regional office</h4>
+      <ul>
+        <li>F.A. Ahmed Road,</li>
+        <li>Sewali Path, Bylane #1,</li>
+        <li>House no. 1, Guwahati Six Mile,</li>
+        <li>Assam - 781022</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="part2">
+    <div class="south1">
+      <h4>South Regional office</h4>
+      <ul>
+        <li>H.No.: 5-6, 2nd Floor,</li>
+        <li>My Home Glory Apartment,</li>
+        <li>Above Sarvi Bakars, Beside Police Officer’s Mess,</li>
+        <li>Masab Tank, Hyderabad - 500028</li>
+      </ul>
+    </div>
+
+    <div class="south2">
+      <h4>South Regional office</h4>
+      <ul>
+        <li>SY 118/2, 80 Feet Main Road, Jakkur,</li>
+        <li>Bangalore - 560064</li>
+      </ul>
+    </div>
+
+    <div class="west">
+      <h4>West Regional Office</h4>
+      <ul>
+        <li>Plot No 35, 2nd floor,</li>
+        <li>Evergreen Industrial Estate, Satya Darshan Colony,</li>
+        <li>Gundavali, Andheri East,</li>
+        <li>Mumbai, Maharashtra - 400053</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bottom">
+  <h1 class="heading3">Here’s why our customers choose us</h1>
+  <div class="count">
+    <div class="count1">
+      <h2 class="count-heading">3 million +</h2>
+      <p class="count-text">Shipments handling per day</p>
+    </div>
+
+    <div class="count2">
+      <h2 class="count-heading">3,000+</h2>
+      <p class="count-text">Offices & Service Centres</p>
+    </div>
+
+    <div class="count3">
+      <h2 class="count-heading">52+</h2>
+      <p class="count-text">Airport Connections</p>
+    </div>
+
+    <div class="count4">
+      <h2 class="count-heading">35,000+</h2>
+      <p class="count-text">Feet on Street</p>
+    </div>
+
+    <div class="count5">
+      <h2 class="count-heading">2,500+</h2>
+      <p class="count-text">Network Cities</p>
+    </div>
+  </div>
+</div>

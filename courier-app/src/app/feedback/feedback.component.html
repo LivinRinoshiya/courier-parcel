@@ -1,0 +1,105 @@
+<body>
+  <div class="feedback">
+    <h2 class="heading">Anytime, we are at your service</h2>
+    <form>
+      <div class="container">
+        <h1 class="name">MIGRATE<span>SMART</span></h1>
+        <p class="text">A parcel and courier company</p>
+        <hr />
+        <input
+          id="country"
+          type="text"
+          placeholder="Enter the country"
+          required
+          formControlName="country"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.country.errors }"
+        />
+        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+          <div *ngIf="f.country.errors.required">Username is required</div>
+          <div *ngIf="f.country.errors.minlength">
+            must be at least 6 characters
+          </div>
+          <div *ngIf="f.country.errors.maxlength">
+            must not exceed 20 characters
+          </div>
+        </div>
+
+        <input
+          id="station"
+          type="text"
+          placeholder="Enter the station"
+          required
+          formControlName="station"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.station.errors }"
+        />
+        <div *ngIf="submitted && f.station.errors" class="invalid-feedback">
+          <div *ngIf="f.station.errors.required">Username is required</div>
+          <div *ngIf="f.station.errors.minlength">
+            must include at least 6 characters
+          </div>
+          <div *ngIf="f.station.errors.maxlength">
+            must not exceed 20 characters
+          </div>
+        </div>
+
+        <input
+          id="name"
+          type="text"
+          name="nam"
+          placeholder="Name"
+          required
+          formControlName="name"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+        />
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">Name is required</div>
+          <div *ngIf="f.name.errors.minlength">
+            Name must include at least 6 characters
+          </div>
+          <div *ngIf="f.name.errors.maxlength">
+            Name must not exceed 20 characters
+          </div>
+        </div>
+        <input
+          id="email"
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          required
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+        />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">Email is required</div>
+          <div *ngIf="f.email.errors.email">Email is invalid</div>
+        </div>
+        <input
+          id="number"
+          type="text"
+          name="country code"
+          placeholder="Country Code"
+          value="+91"
+          size="2"
+          formControlName="number"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.number.errors }"
+        />
+        <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+          <!-- <div *ngIf="f.name.errors.minLength">
+            Name must include at least 6 characters
+          </div> -->
+        </div>
+
+        <!-- <label>Feedback</label>
+        <textarea id="feedback" placeholder="enter your feedback"> </textarea> -->
+        <div class="form-group">
+          <button type="submit" class="btn1">Submit</button><br /><br />
+        </div>
+      </div>
+    </form>
+  </div>
+</body>

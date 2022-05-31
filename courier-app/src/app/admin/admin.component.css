@@ -1,0 +1,89 @@
+section {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  /* background: url(../../images/background8.jpg); */
+  background-size: 1350px;
+  width: 100%;
+  margin-top: -20px;
+  background-image: linear-gradient(180deg, #f37d89, #f0273b);
+  padding: 90px;
+}
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 800px;
+}
+h1 {
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.text {
+  color: #f0273b;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 2px;
+  margin: 20px 0 30px;
+}
+.login-box {
+  width: 280px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  color: #fff;
+  margin-left: 40%;
+}
+
+h1 {
+  float: left;
+  font-size: 40px;
+  border-bottom: 6px solid;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+
+.form-group {
+  width: 90%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 28px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #000;
+  margin-left: 50px;
+}
+input {
+  border: none;
+  outline: none;
+  background: none;
+  /* color: white; */
+  font-size: 18px;
+  width: 200px;
+  float: left;
+  margin: 0 10px;
+}
+
+.form-group i {
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+.btn {
+  width: 100px;
+  background: none;
+  border: 2px solid #000;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.textsuccess {
+  color: #f0273b;
+}
+
+.signup {
+  margin-left: 270px;
+  padding-top: 30px;
+}
