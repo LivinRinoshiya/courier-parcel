@@ -1,13 +1,26 @@
+section {
+  background-color: #ddd;
+  height: 500px;
+  margin-top: -20px;
+}
+
+h2 {
+  color: #f0273b;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+}
 #pickup {
   border-collapse: collapse;
   width: 100%;
-  padding: 100px;
+  padding-top: 500px;
 }
 
 #pickup td,
 #pickup th {
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: center;
 }
 
 #pickup tr:nth-child(even) {

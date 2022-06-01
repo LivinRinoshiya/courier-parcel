@@ -18,7 +18,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServiceComponent } from './service/service.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PreviousComponent } from './previous/previous.component'
+import { PreviousComponent } from './previous/previous.component';
+import { OrderdashboardComponent } from './orderdashboard/orderdashboard.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component'
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -34,6 +37,9 @@ const routes: Routes =[
   {path: 'service', component: ServiceComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'userdashboard', component: UserdashboardComponent},
+
+
 
 
   
@@ -55,6 +61,9 @@ const routes: Routes =[
     AdminComponent,
     DashboardComponent,
     PreviousComponent,
+    OrderdashboardComponent,
+    UserdashboardComponent,
+    AdmindashboardComponent,
   ],
   imports: [
     BrowserModule,

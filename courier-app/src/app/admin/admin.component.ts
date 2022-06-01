@@ -26,9 +26,10 @@ export class AdminComponent implements OnInit {
        console.log("data returned from server",data);
        
         if(data.docs[0].email == Formvalue.email){
-       this.router.navigate(['/dashboard']);
+       this.router.navigate(['dashboard']);
  
        alert("data verified");
+
        }
      })
    }

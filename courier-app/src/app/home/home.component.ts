@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PickupService } from '../pickup.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public searchTerm : string= '';
   image:string = "/images/image6.jpg";
  
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
 }

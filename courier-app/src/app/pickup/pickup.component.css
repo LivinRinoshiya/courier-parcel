@@ -20,16 +20,16 @@
 .btn {
   background-color: #ca303f;
   border: 1px solid #ffff;
-  border: none;
   color: white;
   cursor: pointer;
-  margin: 8px 0;
+  margin-left: 125px;
   opacity: 0.9;
   padding: 16px 20px;
   width: 300px;
 }
 .btn:hover {
   opacity: 1;
+  transform: scale(1.08);
 }
 input {
   border: #f1f1f1;

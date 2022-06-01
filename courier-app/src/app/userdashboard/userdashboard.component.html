@@ -1,0 +1,55 @@
+<!-- <section>
+  <div class="pickup-details">
+    <h2>Congrats!!!</h2>
+  </div>
+  <h3>Your order has been placed!!!</h3>
+  <table id="pickup">
+    <div class="row">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          <th>Pickup From</th>
+          <th>Pickup To</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="col" *ngFor="let user of parceldetails">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.mobile }}</td>
+          <td>{{ user.fromplace }}</td>
+          <td>{{ user.toplace }}</td>
+          <td>{{ user.date }}</td>
+        </tr>
+      </tbody>
+    </div>
+  </table>
+</section> -->
+<section>
+  <div class="pickup-details">
+    <h2>Congrats!!!</h2>
+  </div>
+  <h3>Your order has been placed!!!</h3>
+  <button class="btn1"><a href="signup">logout</a></button>
+  <button class="btn2"><a href="pickup">Create another order</a></button>
+  <div class="container" *ngFor="let user of parceldetails">
+    <div class="content">
+      <label>Name</label>
+      {{ user.name }}
+    </div>
+
+    <div class="content">
+      <label>From Place</label>
+      {{ user.fromplace }}
+    </div>
+
+    <div class="content">
+      <label>To place</label>
+      {{ user.toplace }}
+    </div>
+    <button class="btn">Delete</button>
+  </div>
+</section>

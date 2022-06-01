@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,Validators,AbstractControl} from '@angular/forms';
 import { SignupFormService} from '../signup-form.service';
 import { HttpClient , HttpHeaders} from '@angular/common/http';  
+
 // import { Console } from 'console';
 
 @Component({
@@ -24,9 +25,9 @@ export class SignupComponent implements OnInit {
       email:['',[Validators.required, Validators.pattern("[A-Za-z0-9]*@gmail.com")]],
       password:['',[Validators.required,Validators.pattern("[A-Za-z0-9@!_]{6,}")]],
       confirmpassword:['',[Validators.required,Validators.pattern("[A-Za-z0-9@!_]{6,}")]]
-    })
+    },);
     }
-   
+    
    
     login(FormValue:any){
       console.log("from form",FormValue);

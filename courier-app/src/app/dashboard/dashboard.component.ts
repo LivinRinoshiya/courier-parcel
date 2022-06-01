@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PickupComponent } from '../pickup/pickup.component';
+import { FormBuilder} from '@angular/forms';
 import { PickupService } from '../pickup.service';
-import { FormGroup, FormBuilder,Validators,AbstractControl} from '@angular/forms';
-// import { registerLocaleData } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,48 +10,72 @@ import { FormGroup, FormBuilder,Validators,AbstractControl} from '@angular/forms
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  array:any = [];
-  data: any;
-  allpickup: any;
-  allpickupData: any;
-  pickupRecord: any = {
-    name: '',
-    email: '',
-    mobile: '',
-   fromplace:'',
-   toplace:'',
-   date:'',
-    "type": "pickup"
-   };
-
-  constructor( private build:FormBuilder, private pickup:PickupService) { 
-this.register()
+ 
+  array:any=[];
+  alluserData: any;
+  alluser: any;
+  data:any;
+  parcelRecord: any;
+  parceldetails: any =[];
+  constructor(private fb:FormBuilder,private pickup:PickupService,private router:Router ) { 
+    // this.register(Form)
+    this.pickup.get("courier-db").subscribe((datas: any) => {
+      console.log("ParcelDetails", datas)
+      this.parcelRecord = datas.rows;
+      this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
+    });
+    
   }
   ngOnInit(): void {
-  }
-register() {
-  let data = {
-    selector: {
-      type: "pickup"
-    }
-  }
-  this.pickup.get(data).subscribe(res => {
-    this.allpickup=res;
-    console.log(res);
-    this.allpickup = this.allpickup.docs;
-    this.allpickupData = this.allpickup
-    // .map((el: any)=>el.doc);
-    console.log(this.allpickupData[0]);
-    for (const array in this.allpickupData) {
-      console.log(this.allpickupData[array])
-    }
-    
-  }, rej => {
-    alert("opps! Can not post data" + rej);
-  });
-  
   }
 }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // register(Formvalue:any) {
+
+    // let data = {
+    //   selector: {
+    //     type: "pickup"
+    //   }
+    // }
+    
+    // this.pickup.get("courier-db").subscribe((datas: any) => {
+    //       console.log("ParcelDetails", datas)
+          // this.parcelRecord = datas.docs;
+          // this.parceldetails = this.parcelRecord;
+
+    // this.pickup.get(data).subscribe((res:any) => {
+    //   this.alluser=res;
+    //   console.log(res);
+    //   this.alluser = this.alluser.docs;
+    //   this.alluserData = this.alluser;
+    //   console.log(this.alluserData[0]);
+    //   for (const array in this.alluserData) {
+    //     console.log(this.alluserData[array])
+//     });
+// }
+
+        // this.router.navigate(['dashboard']);
+    // }, rej => {
+    //   alert("opps! Can not post data" + rej);
+    // });
+    
+    // }
+// }

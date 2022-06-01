@@ -28,7 +28,7 @@ export class LoginPageComponent implements OnInit {
       console.log("data returned from server",data);
       
        if(data.docs[0].email == Formvalue.email){
-      this.router.navigate(['/']);
+      this.router.navigate(['/pickup']);
 
       alert("data verified");
       }
