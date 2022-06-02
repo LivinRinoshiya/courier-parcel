@@ -36,7 +36,6 @@ input {
   display: inline-block;
   margin: 5px 0 22px 0;
   padding: 10px;
-  border: none;
   outline: none;
   background: none;
   border-bottom: 1px solid #ca303f;
@@ -61,8 +60,7 @@ hr {
   font-size: 15px;
   font-weight: 300;
   line-height: 2px;
-  margin-left: 700px;
-  margin: 20px 0 30px;
+  margin: 20px 700px 30px;
   text-align: center;
   color: #ca303f;
 }
