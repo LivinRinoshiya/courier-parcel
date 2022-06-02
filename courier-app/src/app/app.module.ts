@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { SignupComponent } from './signup/signup.component';
@@ -30,7 +29,6 @@ const routes: Routes =[
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'header', component: HeaderComponent},
-  {path: 'about', component: AboutComponent},
   {path: 'pickup', component: PickupComponent},
   {path: 'feedback', component: FeedbackComponent},
   {path: 'login-page', component: LoginPageComponent},
@@ -50,7 +48,6 @@ const routes: Routes =[
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent,
     FeedbackComponent,
     SignupComponent,
     PickupComponent,
