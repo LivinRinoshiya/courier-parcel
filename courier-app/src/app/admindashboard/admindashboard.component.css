@@ -1,0 +1,50 @@
+section {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  color: rgb(223, 222, 222);
+}
+.side-menu {
+  background: #f05462;
+  width: 20vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  /* margin-left: -20px; */
+}
+.side-menu .brand-name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu li {
+  font-size: 24px;
+  padding: 10px 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.side-menu li:hover {
+  background: #ddd;
+  color: #f05462;
+  transform: scale(1.08);
+}
+.icon2 {
+  color: #fff;
+  width: 30px;
+}
+.icon4 {
+  width: 25px;
+}

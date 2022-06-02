@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
       this.parcelRecord = datas.rows;
       this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
     });
+
     
   }
   ngOnInit(): void {

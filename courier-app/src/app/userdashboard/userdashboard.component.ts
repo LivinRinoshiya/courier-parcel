@@ -28,9 +28,15 @@ export class UserdashboardComponent implements OnInit {
       this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
     });
     
+    
   }
 
   ngOnInit(): void {
   }
-
+  delete(id:any,rev:any){
+    this.pickup.Delete(id,rev).subscribe(res=>{
+      console.log(res);
+      alert("Deleted sucessfully");
+    })
+  }
 }

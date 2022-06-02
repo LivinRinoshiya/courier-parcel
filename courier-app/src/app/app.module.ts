@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -19,9 +19,12 @@ import { ServiceComponent } from './service/service.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PreviousComponent } from './previous/previous.component';
-import { OrderdashboardComponent } from './orderdashboard/orderdashboard.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
-import { AdmindashboardComponent } from './admindashboard/admindashboard.component'
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpCallInterceptor } from './interceptor';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -38,11 +41,7 @@ const routes: Routes =[
   {path: 'admin', component: AdminComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'userdashboard', component: UserdashboardComponent},
-
-
-
-
-  
+  {path: 'admindashboard',component:AdmindashboardComponent}
 
 ];
 @NgModule({
@@ -61,7 +60,6 @@ const routes: Routes =[
     AdminComponent,
     DashboardComponent,
     PreviousComponent,
-    OrderdashboardComponent,
     UserdashboardComponent,
     AdmindashboardComponent,
   ],
@@ -70,9 +68,16 @@ const routes: Routes =[
     AppRoutingModule,
     HttpClientModule,ReactiveFormsModule,
     RouterModule.forRoot(routes),
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpCallInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

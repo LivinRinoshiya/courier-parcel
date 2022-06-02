@@ -1,40 +1,89 @@
-section {
+.head {
+  margin-left: 300px;
+  color: #f0273b;
+  padding: 20px;
+}
+.heading {
   background-color: #ddd;
-  height: 500px;
+  /* padding: 10px; */
+  /* height: 50px; */
   margin-top: -20px;
 }
-
 h2 {
   color: #f0273b;
   font-size: 40px;
   text-align: center;
   padding: 20px;
 }
-#pickup {
-  border-collapse: collapse;
-  width: 100%;
-  padding-top: 500px;
-}
-
-#pickup td,
-#pickup th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-#pickup tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#pickup tr:hover {
+.pickup-details {
   background-color: #ddd;
+  width: 900px;
+  margin-left: 100px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
 }
 
-#pickup th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #f0273b;
-  color: white;
+#pickup {
+  border: none;
+
+  height: 300px;
+}
+.row {
+  padding: 50px;
+}
+.dashboard {
+  display: flex;
+  flex-direction: row;
+}
+section {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  color: rgb(223, 222, 222);
+}
+.side-menu {
+  background: #f0273b;
+  width: 20vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: -90px;
+  /* margin-left: -20px; */
+}
+.side-menu .brand-name {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu li {
+  font-size: 24px;
+  padding: 10px 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.side-menu li:hover {
+  background: #ddd;
+  color: #f0273b;
+  transform: scale(1.08);
+}
+.icon2 {
+  color: #fff;
+  width: 30px;
+}
+.icon4 {
+  width: 25px;
 }

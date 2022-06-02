@@ -42,7 +42,8 @@ export class PickupComponent implements OnInit {
       fromplace: [this.userRecord.fromplace],
       toplace: [this.userRecord.toplace],
       date: [this.userRecord.date],
-      type:[this.userRecord.type]
+      _id:[''],
+      _rev:['']
     });
     }
     ngOnInit(): void {
@@ -77,12 +78,11 @@ export class PickupComponent implements OnInit {
            }
            
         console.log("from form", Formvalue);
-        this.pickup.add("courier-db",Formvalue).subscribe((data) => {
+        this.pickup.add("courier-db",pickup).subscribe((data) => {
           console.log("data returned from server", data);
-
+          this.router.navigate(['/userdashboard']);
 
         })
-      this.router.navigate(['/userdashboard']);
 
 
    

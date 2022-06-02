@@ -1,27 +1,70 @@
 <section>
-  <div class="pickup-details">
-    <h2>Admin Dashboard</h2>
+  <div class="heading">
+    <h1 class="head">DASHBOARD</h1>
   </div>
-  <table id="pickup">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Mobile Number</th>
-        <th>Pickup From</th>
-        <th>Pickup To</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of parceldetails">
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.mobile }}</td>
-        <td>{{ user.fromplace }}</td>
-        <td>{{ user.toplace }}</td>
-        <td>{{ user.date }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="dashboard">
+    <div class="side-menu">
+      <div class="brand-name">
+        <h1>Get Started</h1>
+      </div>
+
+      <ul>
+        <li>
+          <img
+            class="icon1"
+            src="../../images/icons8-dashboard-layout-24.png"
+          />
+          Dashboard
+        </li>
+        <li>
+          <img class="icon2" src="../../images/ordernew.png" />
+          Orders
+        </li>
+        <li>
+          <img
+            class="icon3"
+            src="../../images/icons8-duplicate-contacts-24.png"
+          />
+          Contact
+        </li>
+        <li>
+          <img class="icon4" src="../../images/icons8-feedback-50.png" />
+          Feedbacks
+        </li>
+      </ul>
+    </div>
+    <div class="pickup-details">
+      <!-- <div class="container">
+      <div class="container1">
+        <h1>
+
+        </h1>
+      </div> -->
+
+      <!-- </div> -->
+      <table id="pickup">
+        <thead>
+          <tr>
+            <th class="row">Name</th>
+            <th class="row">Email</th>
+            <th class="row">Mobile Number</th>
+            <th class="row">Pickup From</th>
+            <th class="row">Pickup To</th>
+            <th class="row">Date</th>
+          </tr>
+        </thead>
+        <br />
+        <tbody>
+          <tr *ngFor="let user of parceldetails">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.mobile }}</td>
+            <td>{{ user.fromplace }}</td>
+            <td>{{ user.toplace }}</td>
+            <td>{{ user.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>

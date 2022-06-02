@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PickupService } from '../pickup.service';
 
 @Component({
   selector: 'app-home',

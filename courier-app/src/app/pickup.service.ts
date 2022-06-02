@@ -34,7 +34,6 @@ storedata2:any;
       "date": formData['date'],
      
       "type": "pickup",
-      // "user_id":this.userId
   }
     return this.http.post<any>(this.url +'courier-db',data,this.httpOptions)
   }
@@ -59,5 +58,12 @@ const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
     const link = this.url + "/courier-db/_all_docs?include_docs=true";
     const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
         return this.http.get(link, { headers: { Authorization: basicAuth}});
+      }
+
+      Delete(id: any,rev:any): Observable<{}>  {
+        console.log(id);
+        console.log(rev);
+      this.url= this.url+'courier-db/'+id+'?rev='+rev;
+      return this.http.delete(this.url,this.httpOptions)
       }
 }
