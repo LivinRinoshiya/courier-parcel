@@ -32,6 +32,7 @@ export class UserdashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
   delete(id:any,rev:any){
     this.pickup.Delete(id,rev).subscribe(res=>{

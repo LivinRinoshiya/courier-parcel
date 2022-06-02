@@ -14,7 +14,6 @@ body {
 .clients {
   display: grid;
   justify-content: space-evenly;
-  display: grid;
   height: 400px;
   align-content: start;
   grid-template-columns: auto auto auto;
@@ -140,11 +139,9 @@ h5 {
   border: #f0273b;
   padding: 10px;
 }
-.search-button i {
+.search-button em {
   width: 40px;
   color: #f0273b;
-
-  /* border: none; */
 }
 .search {
   margin-top: 45px;
@@ -231,7 +228,7 @@ h4 {
   margin-top: 90px;
 } */
 
-b {
+strong {
   color: #b30d1e;
 }
 .serve {
