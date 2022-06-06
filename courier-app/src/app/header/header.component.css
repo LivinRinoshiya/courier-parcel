@@ -26,9 +26,10 @@
   background: black;
   display: flex;
   list-style: none;
-  margin-left: 250px;
   padding: 15px;
   text-decoration: none;
+  float: left;
+  margin-left: 200px;
 }
 #navlist li {
   color: white;

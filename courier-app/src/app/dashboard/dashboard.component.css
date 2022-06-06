@@ -11,6 +11,7 @@ img {
 }
 .heading {
   background-color: #ddd;
+
   margin-top: -20px;
 }
 h2 {
@@ -53,10 +54,6 @@ caption {
 section {
   min-height: 100vh;
 }
-a {
-  text-decoration: none;
-  color: #fff;
-}
 
 li {
   list-style: none;
@@ -73,7 +70,6 @@ h2 {
   display: flex;
   flex-direction: column;
   margin-top: -90px;
-  /* margin-left: -20px; */
 }
 .side-menu .brand-name {
   height: 10vh;
@@ -103,6 +99,11 @@ h2 {
 }
 .icon5 {
   width: 35px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .logout {

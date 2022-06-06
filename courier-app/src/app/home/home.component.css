@@ -36,9 +36,7 @@ a {
 }
 .clients {
   align-content: start;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto auto auto;
+  display: flex;
   height: 400px;
   justify-content: space-evenly;
   margin-bottom: 40px;
@@ -52,44 +50,31 @@ a {
 .percent {
   text-align: center;
 }
-.client1 {
+.client {
   background-color: #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
   height: 400px;
   margin-bottom: -170px;
   width: 400px;
+  padding: 0 30px;
 }
 .client-text {
   padding: 40px;
 }
-.client-image1 {
+.client-image {
   border-radius: 100%;
   border: 2px solid rgb(61, 59, 59);
   margin-left: 35px;
 }
-.client2 {
-  background-color: #ddd;
-  border-radius: 10px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
-  height: 400px;
-  margin-bottom: -170px;
-  width: 400px;
-}
+
 .client-image2 {
   border-radius: 100%;
   margin-left: 35px;
   border: 2px solid rgb(61, 59, 59);
   margin-top: 80px;
 }
-.client3 {
-  background-color: #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
-  height: 400px;
-  margin-bottom: -170px;
-  width: 400px;
-}
+
 .client-image3 {
   border-radius: 100%;
   margin-left: 35px;
@@ -248,14 +233,8 @@ strong {
   margin-top: 30px;
   padding-top: 20px;
 }
-.part2 {
-  margin-left: 50px;
-}
-.part3 {
-  margin-left: 50px;
-}
-.part4 {
-  margin-left: 50px;
+.part {
+  padding: 0px 30px;
 }
 .heading2 {
   font-size: 40px;
