@@ -2,8 +2,8 @@
 .address {
   background-color: #333;
   color: #f0273b;
-  padding: 2.7em 0;
   font-size: 15px;
+  padding: 2.7em 0;
 }
 ul {
   list-style: none;
@@ -17,72 +17,71 @@ ul {
   flex: 0 0 14%;
 }
 .foot {
-  margin-top: -60px;
-  margin-left: 100px;
   display: flex;
   flex: 1;
+  margin-left: 100px;
+  margin-top: -60px;
 }
 .menu {
-  width: 105%;
   color: #f0273b;
   display: inline-block;
+  width: 105%;
 }
 .menu a {
+  color: aliceblue;
   display: block;
   line-height: 1em;
   text-decoration: none;
-  color: aliceblue;
 }
-
 a {
   color: #f0273b;
   font-size: 14px;
-  text-decoration: none;
+  margin: 15px 0;
   padding: 10px 0;
-  /* margin: 15px 0; */
+  text-decoration: none;
+
+  /*  */
 }
 .menu a:hover {
   color: #f0273b;
 }
-
 .heading {
-  font-weight: bold;
-  margin: 60px;
   color: white;
+  font-weight: bold;
   margin-top: -5px;
+  margin: 60px;
 }
 span {
   color: #f0273b;
 }
 .text {
+  color: #f0273b;
   font-size: 14px;
   font-weight: 100;
   line-height: 2px;
-  color: #f0273b;
   margin-left: 160px;
   margin-top: -50px;
 }
 .text1 {
-  padding-left: 570px;
-  margin-bottom: 60px;
-  padding-top: 40px;
   color: #ee4f5c;
   font-size: 20px;
+  margin-bottom: 60px;
+  padding-left: 570px;
+  padding-top: 40px;
 }
-
 .social-container {
+  margin-bottom: -40px;
   margin-left: 500px;
   margin-top: -40px;
-  margin-bottom: -40px;
 }
 .social-container a {
-  border: 1px solid #ee4f5c;
-  border-radius: 50%;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 5px;
-  height: 40px;
-  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #ee4f5c;
   color: #ee4f5c;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  margin: 0 5px;
+  width: 40px;
 }

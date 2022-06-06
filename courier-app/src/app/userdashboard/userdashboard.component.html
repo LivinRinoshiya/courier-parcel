@@ -13,24 +13,28 @@
     <div class="containers">
       <table class="pickup">
         <caption>
-          Orders
+          Your Orders!!!
         </caption>
         <thead>
-          <tr>
+          <tr class="tab-row">
             <th class="tab">Pickup From</th>
             <th class="tab">Pickup To</th>
             <th class="tab">Date</th>
-            <th class="tab">Delete</th>
+            <th class="tab">Order Placed</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of parceldetails">
+          <tr *ngFor="let user of alluserData">
             <td class="row">{{ user.fromplace }}</td>
             <td class="row">{{ user.toplace }}</td>
             <td class="row">{{ user.date }}</td>
             <td>
-              <button class="btn" (click)="delete(user._id, user._rev)">
-                Delete
+              <button class="btn">
+                <img
+                  class="icon-tick"
+                  src="../../images/icons8-double-tick-50.png"
+                  alt="icon"
+                />
               </button>
             </td>
           </tr>

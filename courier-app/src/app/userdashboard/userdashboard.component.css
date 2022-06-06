@@ -2,41 +2,47 @@ section {
   background-color: #fff;
   margin-top: -20px;
 }
-
+caption {
+  font-size: 25px;
+  text-align: center;
+}
 h2 {
   color: #f0273b;
   font-size: 40px;
-  text-align: center;
   padding: 20px;
+  text-align: center;
+}
+.tab-row {
+  background-color: #f0273b;
+  width: 00px;
+
+  /*  */
 }
 .confirm {
   text-align: center;
 }
-
 .para {
   text-align: center;
 }
-
 .btn1 {
-  margin-left: 500px;
   background-color: #f0273b;
-  padding: 15px;
   border: none;
   color: #000;
+  margin-left: 500px;
+  padding: 15px;
   width: 170px;
 }
-
 .btn1:hover {
   transform: scale(1.09);
 }
 .btn2 {
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-bottom: 30px;
   background-color: #f0273b;
-  padding: 15px;
   border: none;
   color: #fff;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  padding: 15px;
 }
 .btn2:hover {
   transform: scale(1.09);
@@ -50,9 +56,9 @@ label {
 }
 .btn {
   background-color: #f0273b;
-  margin-top: 15px;
-  margin-left: 50px;
   color: #fff;
+  margin-left: 90px;
+  margin-top: 15px;
 }
 .btn:hover {
   transform: scale(1.09);
@@ -62,30 +68,32 @@ label {
   width: 50px;
 }
 .success {
-  width: 400px;
-  margin-left: 100px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  margin-left: 100px;
+  width: 400px;
 }
-
 .order {
-  margin-left: 360px;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
-  border-radius: 2px;
+  margin-left: 360px;
 }
 .containers {
   background-color: rgb(230, 227, 227);
-  width: 600px;
   margin-bottom: 30px;
+  margin-left: -150px;
   padding-bottom: 40px;
+  width: 900px;
 }
 .tab {
-  padding: 0px 50px;
-  padding-top: 10px;
-  color: #f0273b;
+  color: #fff;
+  padding: 20px 80px;
 }
-
 .row {
-  padding: 0px 50px;
+  font-size: 15px;
+  padding: 10px 80px;
+}
+.icon-tick {
+  width: 20px;
 }

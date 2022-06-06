@@ -1,60 +1,48 @@
 .navbar {
-  position: relative;
   background: black;
   display: flex;
   flex-direction: row;
-  /* position: absolute; */
+  position: relative;
+}
+.navbar1 {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 .smart {
   color: #f0273b;
 }
-
 .migrate {
   color: rgb(243, 235, 235);
-  margin-top: 33px;
-  margin-left: 40px;
+  margin: 30px;
 }
-
 .text {
   color: #fc283d;
-  margin-top: -14px;
+  margin-top: -30px;
   padding-left: 140px;
 }
 #navlist {
-  list-style: none;
-  display: flex;
-  padding: 25px;
-  margin-left: 250px;
   background: black;
+  display: flex;
+  list-style: none;
+  margin-left: 250px;
+  padding: 15px;
   text-decoration: none;
 }
-
 #navlist li {
-  text-align: center;
-  padding: 25px;
-  font-size: 18px;
   color: white;
+  font-size: 18px;
+  padding: 25px;
+  text-align: center;
   text-decoration: none;
 }
 a {
   color: #fff;
 }
-
 #list {
   text-decoration: none;
 }
-
 #navlist a:hover {
   color: #f0273b;
-}
-
-@media all and (max-width: 500px) {
-  .navbar {
-    padding: 1.6em;
-  }
-
-  #navlist {
-    flex-direction: column;
-    display: none;
-  }
 }

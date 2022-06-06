@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
- 
   array:any=[];
   alluserData: any;
   alluser: any;
@@ -18,16 +17,30 @@ export class DashboardComponent implements OnInit {
   parcelRecord: any;
   parceldetails: any =[];
   constructor(private fb:FormBuilder,private pickup:PickupService,private router:Router ) { 
-    // this.register(Form)
-    this.pickup.get("courier-db").subscribe((datas: any) => {
-      console.log("ParcelDetails", datas)
-      this.parcelRecord = datas.rows;
-      this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
-    });
-
+ this.register()
     
+  
   }
   ngOnInit(): void {
+    console.log('successfull')
+  }
+  register() {
+    const data = {
+      selector: {
+        type: "pickup"
+      }
+
+  }
+
+  this.pickup.get1(data).subscribe(res => {
+    this.alluser=res;
+    console.log(res);
+    this.alluser = this.alluser.docs;
+    this.alluserData = this.alluser
+     
+    
+  });
+ 
   }
 }
 

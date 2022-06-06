@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" *ngIf="this.header.show">
   <div class="heading">
     <h1 class="migrate">MIGRATE<span class="smart">SMART</span></h1>
     <p class="text">a parcel and courier company</p>
@@ -9,7 +9,25 @@
       <li><a id="list" href="service">Services</a></li>
       <li><a id="list" href="contact">Contact</a></li>
       <li><a id="list" href="signup">Signup</a></li>
-      <li class="active"><a id="list" href="dashboard">Admin</a></li>
+      <li><a id="list" href="login-page" *ngIf="this.header.show">Login</a></li>
+      <li class="active"><a id="list" href="admin">Admin</a></li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar1" *ngIf="this.header.hide">
+  <div class="heading">
+    <h1 class="migrate">MIGRATE<span class="smart">SMART</span></h1>
+    <p class="text">a parcel and courier company</p>
+  </div>
+  <div class="navbar-items">
+    <ul id="navlist">
+      <li><a id="list" href="home">Home</a></li>
+      <li><a id="list" href="service">Services</a></li>
+      <li><a id="list" href="contact">Contact</a></li>
+      <li><a id="list" href="signup">Signup</a></li>
+      <li><a id="list" href="login-page" (click)="logout()">Logout</a></li>
+      <li class="active"><a id="list" href="admin">Admin</a></li>
     </ul>
   </div>
 </nav>

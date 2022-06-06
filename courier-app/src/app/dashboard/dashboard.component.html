@@ -5,6 +5,12 @@
   <div class="dashboard">
     <div class="side-menu">
       <div class="brand-name">
+        <img
+          class="arrow"
+          src="../../images/icons8-curved-arrow-50.png"
+          alt="icon"
+        />
+
         <h1>Get Started</h1>
       </div>
 
@@ -37,32 +43,48 @@
           />
           Feedbacks
         </li>
+        <li>
+          <img
+            class="icon5"
+            src="../../images/icons8-settings-50.png"
+            alt="icon"
+          />
+          Settings
+        </li>
+        <li class="logout">
+          <a href="home">Logout</a>
+          <img
+            class="icon6"
+            src="../../images/icons8-chevron-right-30.png"
+            alt="icon"
+          />
+        </li>
       </ul>
     </div>
-    <div class="pickup-details">
-      <table id="pickup">
+    <div class="containers">
+      <table class="pickup">
         <caption>
-          order
+          Customer Orders!!!
         </caption>
         <thead>
-          <tr>
-            <th class="row">Name</th>
-            <th class="row">Email</th>
-            <th class="row">Mobile Number</th>
-            <th class="row">Pickup From</th>
-            <th class="row">Pickup To</th>
-            <th class="row">Date</th>
+          <tr class="tab-row">
+            <th class="tab">Name</th>
+            <th class="tab">Email</th>
+            <th class="tab">Mobile Number</th>
+            <th class="tab">Pickup From</th>
+            <th class="tab">Pickup To</th>
+            <th class="tab">Date</th>
           </tr>
         </thead>
         <br />
         <tbody>
-          <tr *ngFor="let user of parceldetails">
-            <td>{{ user.name }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.mobile }}</td>
-            <td>{{ user.fromplace }}</td>
-            <td>{{ user.toplace }}</td>
-            <td>{{ user.date }}</td>
+          <tr *ngFor="let user of alluserData">
+            <td class="row">{{ user.name }}</td>
+            <td class="row">{{ user.email }}</td>
+            <td class="row">{{ user.mobile }}</td>
+            <td class="row">{{ user.fromplace }}</td>
+            <td class="row">{{ user.toplace }}</td>
+            <td class="row">{{ user.date }}</td>
           </tr>
         </tbody>
       </table>

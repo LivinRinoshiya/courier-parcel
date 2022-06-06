@@ -17,27 +17,31 @@ export class UserdashboardComponent implements OnInit {
   parcelRecord: any;
   parceldetails: any =[];
   constructor(private fb:FormBuilder,private pickup:PickupService,private router:Router ) { 
-    this.pickup.get("courier-db").subscribe((datas: any) => {
-      console.log("ParcelDetails", datas)
-      this.parcelRecord = datas.rows;
-      this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
-    });
-    this.pickup.get1("courier-db").subscribe((datas: any) => {
-      console.log("ParcelDetails", datas)
-      this.parcelRecord = datas.rows;
-      this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
-    });
+   this.register()
+   
     
     
   }
 
   ngOnInit(): void {
-    
+    console.log ('dashboard')
   }
-  delete(id:any,rev:any){
-    this.pickup.Delete(id,rev).subscribe(res=>{
-      console.log(res);
-      alert("Deleted sucessfully");
-    })
+  register() {
+    const data = {
+      selector: {
+        type: "pickup"
+      }
+
+  }
+
+  this.pickup.get1(data).subscribe(res => {
+    this.alluser=res;
+    console.log(res);
+    this.alluser = this.alluser.docs;
+    this.alluserData = this.alluser
+     
+    
+  });
+ 
   }
 }

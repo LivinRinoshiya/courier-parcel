@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder,Validators} from '@angular/forms';
 import { SignupFormService} from '../signup-form.service';
 import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
+import { PickupService } from '../pickup.service';
 
 @Component({
   selector: 'app-login-page',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signup:SignupFormService,private router:Router, private http:HttpClient) { }
+  constructor(private fb:FormBuilder,private signup:SignupFormService,private router:Router, private http:HttpClient, private header:PickupService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -28,6 +29,7 @@ export class LoginPageComponent implements OnInit {
       console.log("data returned from server",data);
       
        if(data.docs[0].email == Formvalue.email){
+        this.header.showoff();
       this.router.navigate(['/pickup']);
 
       alert("data verified");

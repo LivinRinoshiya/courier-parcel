@@ -4,34 +4,32 @@
 .track {
   display: flex;
   flex-direction: row;
+  margin-left: 90px;
   padding: 20px;
   width: 500px;
-  margin-left: 90px;
 }
 .track-heading {
   text-align: center;
 }
 .button {
+  background-color: #f0273b;
+  border: none;
+  color: #fff;
   padding: 22px;
   width: 200px;
-  background-color: #f0273b;
-  color: #fff;
-  border: none;
 }
 .button:hover {
   transform: scale(1.05);
 }
 .container1 {
   background-color: rgb(243, 243, 243);
-  padding: 30px;
   border-radius: 10px;
   margin: 50px;
+  padding: 30px;
 }
-
 .text {
   margin-left: 200px;
 }
-
 ul {
   list-style: none;
   padding: 20px;
@@ -42,84 +40,79 @@ li {
 h3 {
   margin-left: 20px;
 }
-
 .container2 {
   display: flex;
   flex-direction: row;
 }
-
 .door {
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
-  background-color: rgb(231, 231, 231);
-  width: 300px;
-  border-radius: 10px;
   margin-left: 35px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+  width: 300px;
 }
 .door:hover {
   transform: scale(1.05);
 }
 .img1 {
-  width: 300px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 300px;
 }
 .tracks {
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
-  background-color: rgb(231, 231, 231);
-  width: 300px;
-  border-radius: 10px;
   margin-left: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+  width: 300px;
 }
 .tracks:hover {
   transform: scale(1.05);
 }
 .img2 {
-  width: 300px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 300px;
 }
-
 .next {
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
-  background-color: rgb(231, 231, 231);
-  width: 300px;
-  border-radius: 10px;
   margin-left: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+  width: 300px;
 }
 .next:hover {
   transform: scale(1.05);
 }
 .img3 {
-  width: 300px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 300px;
 }
-
 .pay {
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
   display: flex;
   flex-direction: column;
-  background-color: rgb(231, 231, 231);
-  width: 300px;
-  border-radius: 10px;
   margin-left: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+  width: 300px;
 }
 .pay:hover {
   transform: scale(1.05);
 }
 .img4 {
-  width: 300px;
-  height: 210px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  height: 210px;
+  width: 300px;
 }
-
 .container4 {
   display: flex;
   flex-direction: row;
@@ -128,57 +121,54 @@ h3 {
 .images {
   display: flex;
   flex-direction: row;
-  padding: 40px;
   padding-top: 100px;
+  padding: 40px;
 }
 .image1 {
   border-radius: 500%;
-  width: 400px;
-  height: 400px;
   border: 5px solid #f0273b;
+  height: 400px;
+  width: 400px;
 }
 /* .image1:hover {
-  transform: scale(0.5);
-} */
+    transform: scale(0.5);
+  } */
 .image2 {
   border-radius: 500%;
-  width: 400px;
+  border: 5px solid #f0273b;
   height: 400px;
   margin-left: 30px;
-  border: 5px solid #f0273b;
+  width: 400px;
 }
 .image3 {
   border-radius: 500%;
-  width: 400px;
+  border: 5px solid #f0273b;
   height: 400px;
   margin-left: 30px;
-  border: 5px solid #f0273b;
+  width: 400px;
 }
-
 .delivery {
   background-color: rgb(226, 224, 224);
-  width: 500px;
   padding: 30px;
+  width: 500px;
 }
 .delivery:hover {
   transform: scale(1.05);
 }
-
 .custom {
   background-color: rgb(226, 224, 224);
-  width: 500px;
-  padding: 30px;
   margin-left: 10px;
+  padding: 30px;
+  width: 500px;
 }
 .custom:hover {
   transform: scale(1.05);
 }
-
 .surcharges {
   background-color: rgb(226, 224, 224);
-  width: 500px;
-  padding: 30px;
   margin-left: 10px;
+  padding: 30px;
+  width: 500px;
 }
 .surcharges:hover {
   transform: scale(1.05);

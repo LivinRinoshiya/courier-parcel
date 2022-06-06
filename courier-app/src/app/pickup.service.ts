@@ -1,19 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import {  Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PickupService {
-
-  // public pickupList = new BehaviorSubject<any>([]);
-  // public search = new BehaviorSubject<string>("");
-
-  // getProducts () {
-  //   return
-  // }
+  hide: boolean=false;
+  show: boolean=true;
+ 
   
 url='https://784ea086-d974-431c-aa48-7801aa7b2561-bluemix.cloudant.com'
 dbUserName='apikey-v2-23epskwaoah6sy6rvo29zejnn1k4kl1llrrq1ot36mry'
@@ -32,7 +27,6 @@ storedata2:any;
       "fromplace": formData['fromplace'],
       "toplace":formData['toplace'] ,
       "date": formData['date'],
-     
       "type": "pickup",
   }
     return this.http.post<any>(this.url +'courier-db',data,this.httpOptions)
@@ -48,22 +42,22 @@ storedata2:any;
     return this.http.post(url,doc,this.httpOptions)
   }
 
-  get(db: any): Observable<{}> {
+get(_db: any): Observable<{}> {
 const link = this.url + "/courier-db/_all_docs?include_docs=true";
 const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
     return this.http.get(link, { headers: { Authorization: basicAuth}});
   }
 
-  get1(db: any): Observable<{}> {
-    const link = this.url + "/courier-db/_all_docs?include_docs=true";
-    const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
-        return this.http.get(link, { headers: { Authorization: basicAuth}});
-      }
+  get1(data: any): Observable<{}> {
+    const url = this.url +'/courier-db/_find';
+    return this.http.post( url,data, this.httpOptions)
 
-      Delete(id: any,rev:any): Observable<{}>  {
-        console.log(id);
-        console.log(rev);
-      this.url= this.url+'courier-db/'+id+'?rev='+rev;
-      return this.http.delete(this.url,this.httpOptions)
+   
       }
+      showoff(){
+        this.hide = !this.hide;
+        this.show = !this.show;
+        console.log(this.show)
+      }
+     
 }
