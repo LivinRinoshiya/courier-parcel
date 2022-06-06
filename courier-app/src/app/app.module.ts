@@ -17,7 +17,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServiceComponent } from './service/service.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { PreviousComponent } from './previous/previous.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -56,7 +55,6 @@ const routes: Routes =[
     ServiceComponent,
     AdminComponent,
     DashboardComponent,
-    PreviousComponent,
     UserdashboardComponent,
     AdmindashboardComponent,
   ],

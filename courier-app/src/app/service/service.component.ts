@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log('service');
+  }
 
   ngOnInit(): void {
+    console.log('service');
+
   }
 
 }

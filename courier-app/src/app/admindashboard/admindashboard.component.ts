@@ -22,6 +22,7 @@ export class AdmindashboardComponent implements OnInit {
   });
 }
   ngOnInit(): void {
+    console.log ('admin dashboard');
   }
   
  

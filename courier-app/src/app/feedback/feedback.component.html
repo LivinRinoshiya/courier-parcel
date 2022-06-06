@@ -88,14 +88,11 @@
           class="form-control"
           [ngClass]="{ 'is-invalid': submitted && f.number.errors }"
         />
-        <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
-          <!-- <div *ngIf="f.name.errors.minLength">
-            Name must include at least 6 characters
-          </div> -->
-        </div>
+        <div
+          *ngIf="submitted && f.number.errors"
+          class="invalid-feedback"
+        ></div>
 
-        <!-- <label>Feedback</label>
-        <textarea id="feedback" placeholder="enter your feedback"> </textarea> -->
         <div class="form-group">
           <button type="submit" class="btn1">Submit</button><br /><br />
         </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder,Validators,AbstractControl} from '@angular/forms';
+import { FormGroup, FormBuilder,Validators} from '@angular/forms';
 import { SignupFormService} from '../signup-form.service';
-import { HttpClient , HttpHeaders} from '@angular/common/http';  
+import { HttpClient} from '@angular/common/http';  
 
 @Component({
   selector: 'app-contact-us',

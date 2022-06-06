@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(public header: PickupService,private router: Router  ) { }
 
   ngOnInit(): void {
+    console.log('header');
   }
   logout(){
     this.header.hide=false;

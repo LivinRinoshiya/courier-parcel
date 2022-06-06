@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class SignupFormService {
-  storedata(Formvalue:any) {
+  storedata(_Formvalue:any) {
     throw new Error('Method not implemented');
   }
 

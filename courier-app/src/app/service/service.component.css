@@ -116,13 +116,13 @@ h3 {
 .container4 {
   display: flex;
   flex-direction: row;
-  padding: 90px;
+  padding: 50px;
 }
 .images {
   display: flex;
   flex-direction: row;
   padding-top: 100px;
-  padding: 40px;
+  padding: 100px 40px;
 }
 .image1 {
   border-radius: 500%;
@@ -130,9 +130,7 @@ h3 {
   height: 400px;
   width: 400px;
 }
-/* .image1:hover {
-    transform: scale(0.5);
-  } */
+
 .image2 {
   border-radius: 500%;
   border: 5px solid #f0273b;

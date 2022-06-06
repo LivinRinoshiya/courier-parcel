@@ -9,9 +9,13 @@ export class HomeComponent implements OnInit {
   public searchTerm : string= '';
   image:string = "/images/image6.jpg";
  
-  constructor() { }
+  constructor() {
+    console.log ('home');
+   }
 
   ngOnInit(): void {
+    console.log ('home');
+
   }
   
 
