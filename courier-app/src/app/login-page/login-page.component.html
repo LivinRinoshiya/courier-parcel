@@ -38,7 +38,14 @@
       </div>
 
       <div class="login-btn">
-        <button id="submitButton" type="submit" class="btn">Login</button>
+        <button
+          id="submitButton"
+          type="submit"
+          class="btn"
+          [disabled]="loginForm.invalid"
+        >
+          Login
+        </button>
         <p class="account">
           Don't have an account? <span><a href="signup">Signup</a></span>
         </p>

@@ -62,7 +62,14 @@
         </div>
 
         <div class="text-center">
-          <button id="submitButton" type="submit" class="btn">Signup</button>
+          <button
+            id="submitButton"
+            type="submit"
+            [disabled]="loginForm.invalid"
+            class="btn"
+          >
+            Signup
+          </button>
         </div>
       </form>
     </div>

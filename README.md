@@ -1,10 +1,7 @@
-# Title
-
-Courier And Parcel Management System (CPMS)
+# Courier And Parcel Management System (CPMS)
 
 # Description
 
-Courier And Parcel Management System (CPMS):
 Courier And Parcel Management System (CPMS) software is the system that assist to ship your couriers and parcels at your doorsteps.
 
 # General Information
