@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, enableProdMode } from '@angular/core';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +11,6 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { SignupComponent } from './signup/signup.component';
 import { PickupComponent } from './pickup/pickup.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {enableProdMode} from '@angular/core';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServiceComponent } from './service/service.component';
