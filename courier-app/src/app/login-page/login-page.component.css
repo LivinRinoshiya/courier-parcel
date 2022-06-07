@@ -25,7 +25,7 @@ section {
   padding: 28px 0;
   margin: 8px 0;
   border-bottom: 1px solid #f0273b;
-  margin-left: 50px;
+  margin-left: 38px;
 }
 input {
   border: none;
@@ -34,7 +34,6 @@ input {
   font-size: 18px;
   width: 200px;
   float: left;
-  margin: 0 10px;
   color: #f0273b;
 }
 

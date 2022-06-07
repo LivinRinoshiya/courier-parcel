@@ -35,7 +35,6 @@ a {
   padding-bottom: 50px;
 }
 .clients {
-  align-content: start;
   display: flex;
   height: 400px;
   justify-content: space-evenly;

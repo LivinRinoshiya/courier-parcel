@@ -11,12 +11,12 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   array:any=[];
-  alluserData: any;
-  alluser: any;
+  allUserData: any;
+  allUser: any;
   data:any;
   parcelRecord: any;
   parceldetails: any =[];
-  constructor(private fb:FormBuilder,private pickup:PickupService,private router:Router ) { 
+  constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router ) { 
  this.register()
     
   
@@ -32,11 +32,11 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  this.pickup.get1(data).subscribe(res => {
-    this.alluser=res;
+  this.pickUp.get1(data).subscribe(res => {
+    this.allUser=res;
     console.log(res);
-    this.alluser = this.alluser.docs;
-    this.alluserData = this.alluser
+    this.allUser = this.allUser.docs;
+    this.allUserData = this.allUser
      
     
   });

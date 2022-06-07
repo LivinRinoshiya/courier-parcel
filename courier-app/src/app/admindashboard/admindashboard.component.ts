@@ -9,21 +9,19 @@ import { Router } from '@angular/router';
 })
 export class AdmindashboardComponent implements OnInit {
   array:any=[];
-  alluserData: any;
-  alluser: any;
+  allUserData: any;
+  allUser: any;
   data:any;
   parcelRecord: any;
-  parceldetails: any =[];
-  constructor(private fb:FormBuilder,private pickup:PickupService,private router:Router) { 
-  this.pickup.get("courier-db").subscribe((datas: any) => {
+  parcelDetails: any =[];
+  constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router) { 
+  this.pickUp.get("courier-db").subscribe((datas: any) => {
     console.log("ParcelDetails", datas)
     this.parcelRecord = datas.rows;
-    this.parceldetails = this.parcelRecord.map((x:any) => x.doc);
+    this.parcelDetails = this.parcelRecord.map((x:any) => x.doc);
   });
 }
   ngOnInit(): void {
     console.log ('admin dashboard');
   }
-  
- 
 }

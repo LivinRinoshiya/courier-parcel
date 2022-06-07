@@ -12,7 +12,7 @@ export class ContactUsComponent implements OnInit {
   successMessage:string ="";
   contactForm!: FormGroup; 
 
-  constructor(private fb:FormBuilder,private signup:SignupFormService, private http:HttpClient) { }
+  constructor(private fb:FormBuilder,private signUp:SignupFormService, private http:HttpClient) { }
 
   ngOnInit(): void {
 
@@ -29,7 +29,7 @@ export class ContactUsComponent implements OnInit {
   register(FormValue:any){
     console.log("from form",FormValue);
    
-   this.signup.add3(FormValue).subscribe((data)=>{
+   this.signUp.add3(FormValue).subscribe((data)=>{
    
     console.log("data returned from server",data);
     })

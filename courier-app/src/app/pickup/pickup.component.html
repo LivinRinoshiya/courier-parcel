@@ -7,8 +7,8 @@
     <div class="part1">
       <div class="container">
         <form
-          [formGroup]="pickupForm"
-          (ngSubmit)="register(this.pickupForm.value)"
+          [formGroup]="pickUpForm"
+          (ngSubmit)="register(this.pickUpForm.value)"
         >
           <div class="form-group">
             <em class="fa fa-user"></em>
@@ -17,8 +17,8 @@
             <span
               class="text-danger"
               *ngIf="
-                pickupForm.controls.name.errors &&
-                pickupForm.controls.name.touched
+                pickUpForm.controls.name.errors &&
+                pickUpForm.controls.name.touched
               "
               ><br />Invalid Name</span
             >
@@ -30,8 +30,8 @@
             <span
               class="text-danger"
               *ngIf="
-                pickupForm.controls.email.errors &&
-                pickupForm.controls.email.touched
+                pickUpForm.controls.email.errors &&
+                pickUpForm.controls.email.touched
               "
               ><br />Invalid Email</span
             >
@@ -47,8 +47,8 @@
             <span
               class="text-danger"
               *ngIf="
-                pickupForm.controls.mobile.errors &&
-                pickupForm.controls.mobile.touched
+                pickUpForm.controls.mobile.errors &&
+                pickUpForm.controls.mobile.touched
               "
               ><br />Invalid Mobile Number</span
             >
@@ -65,8 +65,8 @@
             <span
               class="text-danger"
               *ngIf="
-                pickupForm.controls.fromplace.errors &&
-                pickupForm.controls.fromplace.touched
+                pickUpForm.controls.fromplace.errors &&
+                pickUpForm.controls.fromplace.touched
               "
               ><br />Invalid Place Name</span
             >
@@ -83,8 +83,8 @@
             <span
               class="text-danger"
               *ngIf="
-                pickupForm.controls.toplace.errors &&
-                pickupForm.controls.toplace.touched
+                pickUpForm.controls.toplace.errors &&
+                pickUpForm.controls.toplace.touched
               "
               ><br />Invalid Place Name</span
             >
@@ -97,8 +97,8 @@
             <span
               class="text-danger"
               *ngIf="
-                pickupForm.controls.date.errors &&
-                pickupForm.controls.date.touched
+                pickUpForm.controls.date.errors &&
+                pickUpForm.controls.date.touched
               "
               ><br />Invalid Date</span
             >

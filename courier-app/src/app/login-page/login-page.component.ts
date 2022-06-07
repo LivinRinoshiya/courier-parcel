@@ -12,7 +12,7 @@ import { PickupService } from '../pickup.service';
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signup:SignupFormService,private router:Router, private http:HttpClient, private header:PickupService) { }
+  constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private http:HttpClient, private header:PickupService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -25,11 +25,11 @@ export class LoginPageComponent implements OnInit {
   login(Formvalue:any)
  {
     console.log(Formvalue.email);
-    this.signup.test_get(Formvalue.email).subscribe((data)=>{
+    this.signUp.test_get(Formvalue.email).subscribe((data)=>{
       console.log("data returned from server",data);
       
        if(data.docs[0].email == Formvalue.email){
-        this.header.showoff();
+        this.header.showOff();
       this.router.navigate(['/pickup']);
 
       alert("data verified");

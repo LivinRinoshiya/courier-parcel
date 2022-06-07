@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./pickup.component.css']
 })
 export class PickupComponent implements OnInit {
-  pickupForm!: FormGroup; 
+  pickUpForm!: FormGroup; 
   AppService:any;
   static find:any;
   array: any=[];
@@ -24,8 +24,8 @@ export class PickupComponent implements OnInit {
    
    };
    
-   alluser: any;
-   alluserData: any;
+   allUser: any;
+   allUserData: any;
    store: any = [];
    obj: any;
    idValue: any;
@@ -34,8 +34,8 @@ export class PickupComponent implements OnInit {
    response:any;
    formroup:any;
 
-  constructor(private fb:FormBuilder,private pickup:PickupService,private router:Router) { 
-    this.pickupForm = this.fb.group({
+  constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router) { 
+    this.pickUpForm = this.fb.group({
       name: [this.userRecord.name],
       email: [this.userRecord.email],
       mobile: [this.userRecord.mobile],
@@ -48,7 +48,7 @@ export class PickupComponent implements OnInit {
     }
     ngOnInit(): void {
        
-    this.pickupForm = this.fb.group({
+    this.pickUpForm = this.fb.group({
       name:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
       email:['',[Validators.required, Validators.pattern("[A-Za-z0-9]*@gmail.com")]],
       mobile:['',[Validators.required,Validators.pattern("[0-9]{10}$")]],
@@ -59,15 +59,15 @@ export class PickupComponent implements OnInit {
     });
     }
     
-    get name() {return this.pickupForm.get('name')!;}
-    get email() {return this.pickupForm.get('email')!;}
-    get mobile() {return this.pickupForm.get('mobile')!;}
-    get fromdata() {return this.pickupForm.get('fromdata')!;}
-    get todata() {return this.pickupForm.get('todata')!;}
-    get date() {return this.pickupForm.get('date')!;}
+    get name() {return this.pickUpForm.get('name')!;}
+    get email() {return this.pickUpForm.get('email')!;}
+    get mobile() {return this.pickUpForm.get('mobile')!;}
+    get fromdata() {return this.pickUpForm.get('fromdata')!;}
+    get todata() {return this.pickUpForm.get('todata')!;}
+    get date() {return this.pickUpForm.get('date')!;}
   
       register(Formvalue: any) {
-        const pickup ={
+        const pickUp ={
           name: Formvalue.name,
           email: Formvalue.email,
           mobile: Formvalue.mobile,
@@ -78,7 +78,7 @@ export class PickupComponent implements OnInit {
            }
            
         console.log("from form", Formvalue);
-        this.pickup.add("courier-db",pickup).subscribe((data) => {
+        this.pickUp.add("courier-db",pickUp).subscribe((data) => {
           console.log("data returned from server", data);
           this.router.navigate(['/userdashboard']);
 

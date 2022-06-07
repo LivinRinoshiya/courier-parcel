@@ -54,7 +54,7 @@ const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
 
    
       }
-    showoff(){
+    showOff(){
         this.hide = !this.hide;
         this.show = !this.show;
         console.log(this.show)

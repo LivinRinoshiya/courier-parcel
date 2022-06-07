@@ -20,7 +20,8 @@ Courier And Parcel Management System (CPMS) software is the system that assist t
     -Signup-->-Create Account
     -Login--->-Add Order Details
               -User Dashboard
-    -Admin--->-Admin Dashboard
+    -Admin--->-Admin login
+              -Admin Dashboard
     -Contact
     -Logout
 
@@ -32,13 +33,17 @@ Courier And Parcel Management System (CPMS) software is the system that assist t
 
 3. User Dashboard-->Once when the order is placed, you get a confirmation message and also view the previous order. Then logout.
 
-4. Admin Dashboard-->View overall order details of the customers
+4. Admin login --> If you are an admin login with your own credentials
+
+5. Admin Dashboard-->View overall order details of the customers
+
+6. contact --> You can contact the admin and give your feedback about our service
 
 # Install and run it locally
 
 1.  Download or clone the repository to your local machine:
 
-    $ git clone https://github.com/LivinRinoshiya/Parcel_Courier.git
+    $ git clone https://github.com/LivinRinoshiya/courier-parcel.git
 
 2.  Run npm install inside the downloaded/cloned folder:
 
@@ -52,9 +57,8 @@ Courier And Parcel Management System (CPMS) software is the system that assist t
 # Features
 
 1. DB Connectivity.
-2. Exception Handling with try and catch.
-3. Form validation in frontend level.
-   Form validation in angular level
+2. Form validation in frontend level.
+3. Form validation in angular level
 4. Form null validation in Cloudant database level.
 5. Toastr for alert message.
 6. Dynamic dashboard.

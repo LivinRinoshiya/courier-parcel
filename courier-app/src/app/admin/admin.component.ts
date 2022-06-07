@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
   adminForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signup:SignupFormService,private router:Router, private http:HttpClient) { }
+  constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private http:HttpClient) { }
 
   ngOnInit(): void {
     this.adminForm = this.fb.group({
@@ -22,7 +22,7 @@ export class AdminComponent implements OnInit {
   login(Formvalue:any)
   {
      console.log(Formvalue.email);
-     this.signup.admin_get(Formvalue.email).subscribe((data)=>{
+     this.signUp.admin_get(Formvalue.email).subscribe((data)=>{
        console.log("data returned from server",data);
        
         if(data.docs[0].email == Formvalue.email){

@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
   
   successMessage:string ="";
   loginForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signup:SignupFormService, private http:HttpClient) { 
+  constructor(private fb:FormBuilder,private signUp:SignupFormService, private http:HttpClient) { 
 
 
   }
@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
     login(FormValue:any){
       console.log("from form",FormValue);
      
-     this.signup.add(FormValue).subscribe((data)=>{
+     this.signUp.add(FormValue).subscribe((data)=>{
      
       console.log("data returned from server",data);
       })

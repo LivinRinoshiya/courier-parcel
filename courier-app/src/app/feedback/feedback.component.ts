@@ -23,7 +23,7 @@ export class FeedbackComponent  {
     feedback:'',
 
    };
-  constructor(private fb:FormBuilder,private signup:SignupFormService, private http:HttpClient) { 
+  constructor(private fb:FormBuilder,private signUp:SignupFormService, private http:HttpClient) { 
 
     this.checkout=this.fb.group({
       Country :[this.userRecord.country],
@@ -84,7 +84,7 @@ export class FeedbackComponent  {
 
     onSubmit(Formvalue:any): void {
       console.log("Form:",Formvalue);
-      this.signup.add1(Formvalue).subscribe((data) => {
+      this.signUp.add1(Formvalue).subscribe((data) => {
         console.log("data returned from server",data);
       })
     }
