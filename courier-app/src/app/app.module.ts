@@ -23,6 +23,8 @@ import { HttpCallInterceptor } from './interceptor';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserComponent } from './user/user.component';
 import { PreviousordersComponent } from './previousorders/previousorders.component';
+import { PriceComponent } from './price/price.component';
+import { PricePipe } from './price.pipe';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -61,6 +63,8 @@ const routes: Routes =[
     AdmindashboardComponent,
     UserComponent,
     PreviousordersComponent,
+    PriceComponent,
+    PricePipe,
   ],
   imports: [
     BrowserModule,

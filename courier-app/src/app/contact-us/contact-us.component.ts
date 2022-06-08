@@ -32,6 +32,8 @@ export class ContactUsComponent implements OnInit {
    this.signUp.addContact(FormValue).subscribe((data)=>{
    
     console.log("data returned from server",data);
+    },err=>{
+      console.error("unable to return data",err);
     })
   }
 

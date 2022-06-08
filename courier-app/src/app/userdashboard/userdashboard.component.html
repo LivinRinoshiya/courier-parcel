@@ -1,14 +1,30 @@
 <section>
   <button class="btn1"><a href="user">Go to Dashboard</a></button>
-
   <div class="pickup-details">
-    <h2>Congrats!!!</h2>
+    <h2 class="heading">Price Details</h2>
   </div>
-  <h3 class="confirm">Your order has been placed!!!</h3>
-
-  <div class="order">
+  <div class="card">
     <div class="image">
-      <img class="success" src="../../images/success.png" alt="image" />
+      <img class="card-image" src="../../images/image11.jpg" alt="image" />
+    </div>
+    <div *ngFor="let prd of order">
+      <div class="order">
+        <div class="plus">
+          <button type="button" class="btns" (click)="inc(prd)">
+            <em class="fa fa-plus"></em>
+          </button>
+        </div>
+        <div class="no">
+          <p class="kilogram">{{ prd.kg }}</p>
+        </div>
+        <div class="minus">
+          <button type="button" class="btns" (click)="dec(prd)">
+            <em class="fa fa-minus"></em>
+          </button>
+        </div>
+      </div>
+
+      <p class="total">Total:${{ total * prd.kg | number }}</p>
     </div>
   </div>
   <button class="btn2"><a href="pickup">Create another order</a></button>

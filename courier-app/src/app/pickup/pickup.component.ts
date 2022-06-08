@@ -18,10 +18,14 @@ export class PickupComponent implements OnInit {
     toplace:'',
     date:'',
    };
+  userData: any;
    
   
   constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router) { 
-    
+    const userData =  localStorage.getItem("userData");
+   if(userData){
+   this.userData = JSON.parse(userData);
+   }
     this.pickUpForm = this.fb.group({
       name: [this.userRecord.name],
       mobile: [this.userRecord.mobile],
@@ -56,6 +60,7 @@ export class PickupComponent implements OnInit {
           mobile: Formvalue.mobile,
           fromplace: Formvalue.fromplace,
           toplace: Formvalue.toplace,
+          email:this.userData.email,
           date: Formvalue.date,
           type:"pickup"
            }
@@ -65,6 +70,8 @@ export class PickupComponent implements OnInit {
           console.log("data returned from server", data);
           this.router.navigate(['/userdashboard']);
 
+        },err=>{
+          console.error ("Unable to return data",err);
         })
 
 

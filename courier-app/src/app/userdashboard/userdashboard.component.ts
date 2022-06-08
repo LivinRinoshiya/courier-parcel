@@ -8,36 +8,29 @@ import { PickupService } from '../pickup.service';
   styleUrls: ['./userdashboard.component.css']
 })
 export class UserdashboardComponent implements OnInit {
-  array:any=[];
-  allUserData: any;
-  allUser: any;
-  data:any;
-  parcelRecord: any;
-  parceldetails: any =[];
+ 
   constructor(private pickUp:PickupService ) { 
-   this.register()
    
-    
-    
   }
 
   ngOnInit(): void {
-    console.log ('dashboard')
+   }
+
+   order=[{
+     kg: 1,
+   }]
+   inc(prd: { kg: number; }) {
+    if (prd.kg != 100) {
+      prd.kg += 1;
+    }
   }
-  register() {
-    const data = {
-      selector: {
-        type: "pickup"
-      }
+  dec(prd: { kg: number; }) {
+    if (prd.kg != 1) {
+      prd.kg -= 1;
+    }
+  }
+
+  total:number= 100;
+  
 
   }
-
-  this.pickUp.getUser(data).subscribe(res => {
-    this.allUser=res;
-    console.log(res);
-    this.allUser = this.allUser.docs;
-    this.allUserData = this.allUser
-  });
- 
-  }
-}

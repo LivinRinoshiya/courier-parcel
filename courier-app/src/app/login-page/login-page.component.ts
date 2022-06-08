@@ -36,6 +36,8 @@ export class LoginPageComponent implements OnInit {
 
       alert("data verified");
       }
+    },err=>{
+      console.error("unable to return data",err);
     })
   }
 }

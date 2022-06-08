@@ -34,7 +34,9 @@ export class SignupComponent implements OnInit {
      this.signUp.add(FormValue).subscribe((data)=>{
       console.log("data returned from server",data);
       this.router.navigate(['/login-page']);
-
+      
+      },err=>{
+        console.error("unable to return data",err);
       })
     }
   }

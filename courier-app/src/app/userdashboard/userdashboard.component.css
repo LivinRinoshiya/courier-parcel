@@ -1,9 +1,4 @@
-section {
-  background-color: #fff;
-  margin-top: -20px;
-}
-
-h2 {
+/* h2 {
   color: #f0273b;
   font-size: 40px;
   padding: 20px;
@@ -11,12 +6,52 @@ h2 {
   text-align: center;
 }
 
-.confirm {
+
+.card {
+  background-color: #ddd;
+  width: 500px;
+  margin: 50px 400px;
+  padding: 20px;
+  display: flex;
+}
+.total {
+  text-align: center;
+  font-size: 20px;
+}
+.order {
+  display: flex;
+} */
+
+.heading {
+  text-align: center;
+  font-size: 40px;
+}
+img {
+  width: 400px;
+}
+
+.card {
+  margin: 50px 500px;
+}
+
+.order {
+  display: flex;
+  margin: 50px 150px;
+}
+.btns {
+  padding: 15px;
+  color: #fff;
+  background-color: #f0273b;
+  border: none;
+  margin-left: -30px;
+}
+
+.no {
+  padding: 0 40px;
+  font-size: 20px;
   text-align: center;
 }
-.para {
-  text-align: center;
-}
+
 .btn1 {
   background-color: #f0273b;
   border: none;
@@ -41,45 +76,12 @@ h2 {
   transform: scale(1.09);
 }
 a {
-  color: #fff;
   text-decoration: none;
-}
-label {
-  padding-right: 150px;
-}
-.btn {
-  background-color: #f0273b;
   color: #fff;
-  margin-left: 90px;
-  margin-top: 15px;
+  font-size: 15px;
 }
-.btn:hover {
-  transform: scale(1.09);
-}
-.icon {
-  margin-left: 1100px;
-  width: 50px;
-}
-.success {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  margin-left: 100px;
-  width: 400px;
-}
-.order {
-  border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 360px;
-}
-.containers {
-  background-color: rgb(230, 227, 227);
-  margin-bottom: 30px;
-  margin-left: -150px;
-  padding-bottom: 40px;
-  width: 900px;
-}
-.tab {
-  color: #fff;
-  padding: 20px 80px;
+
+.total {
+  text-align: center;
+  font-size: 20px;
 }

@@ -30,7 +30,7 @@ export class PreviousordersComponent implements OnInit {
     const data = {
       selector: {
         type: "pickup",
-        mobile:this.userData.mobile
+        email:this.userData.email
       }
   }
 
