@@ -10,7 +10,7 @@ Courier And Parcel Management System (CPMS) software is the system that assist t
 
 2. CPMS can add the order information of the customers like pickup location, drop location and date of pickup.
 
-# Project Structure
+# Project flow
 
     -Home
     -Services

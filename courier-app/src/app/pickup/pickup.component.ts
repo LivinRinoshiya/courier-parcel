@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder,Validators} from '@angular/forms';
+import { FormGroup, FormBuilder,Validators, FormControl} from '@angular/forms';
 import { PickupService } from '../pickup.service';
 import { Router } from '@angular/router';
 
@@ -10,34 +10,20 @@ import { Router } from '@angular/router';
 })
 export class PickupComponent implements OnInit {
   pickUpForm!: FormGroup; 
-  AppService:any;
-  static find:any;
-  array: any=[];
+  
   userRecord: any = {
     name: '',
-    email: '',
     mobile: '',
-    fromdate:'',
-    todate:'',
+    fromplace:'',
+    toplace:'',
     date:'',
-  
-   
    };
    
-   allUser: any;
-   allUserData: any;
-   store: any = [];
-   obj: any;
-   idValue: any;
-   alert: any;
-   data: any;
-   response:any;
-   formroup:any;
-
+  
   constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router) { 
+    
     this.pickUpForm = this.fb.group({
       name: [this.userRecord.name],
-      email: [this.userRecord.email],
       mobile: [this.userRecord.mobile],
       fromplace: [this.userRecord.fromplace],
       toplace: [this.userRecord.toplace],
@@ -47,20 +33,18 @@ export class PickupComponent implements OnInit {
     });
     }
     ngOnInit(): void {
-       
     this.pickUpForm = this.fb.group({
       name:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
-      email:['',[Validators.required, Validators.pattern("[A-Za-z0-9]*@gmail.com")]],
       mobile:['',[Validators.required,Validators.pattern("[0-9]{10}$")]],
       fromplace:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
       toplace:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
       date:['',[Validators.required]],
-
     });
+
     }
+   
     
     get name() {return this.pickUpForm.get('name')!;}
-    get email() {return this.pickUpForm.get('email')!;}
     get mobile() {return this.pickUpForm.get('mobile')!;}
     get fromdata() {return this.pickUpForm.get('fromdata')!;}
     get todata() {return this.pickUpForm.get('todata')!;}
@@ -69,7 +53,6 @@ export class PickupComponent implements OnInit {
       register(Formvalue: any) {
         const pickUp ={
           name: Formvalue.name,
-          email: Formvalue.email,
           mobile: Formvalue.mobile,
           fromplace: Formvalue.fromplace,
           toplace: Formvalue.toplace,

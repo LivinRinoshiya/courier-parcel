@@ -2,20 +2,15 @@ section {
   background-color: #fff;
   margin-top: -20px;
 }
-caption {
-  font-size: 25px;
-  text-align: center;
-}
+
 h2 {
   color: #f0273b;
   font-size: 40px;
   padding: 20px;
+  margin-top: -50px;
   text-align: center;
 }
-.tab-row {
-  background-color: #f0273b;
-  width: 00px;
-}
+
 .confirm {
   text-align: center;
 }
@@ -25,10 +20,10 @@ h2 {
 .btn1 {
   background-color: #f0273b;
   border: none;
-  color: #000;
-  margin-left: 500px;
-  padding: 15px;
+  padding: 20px;
   width: 170px;
+  margin-left: 1100px;
+  margin-top: 20px;
 }
 .btn1:hover {
   transform: scale(1.09);
@@ -38,7 +33,7 @@ h2 {
   border: none;
   color: #fff;
   margin-bottom: 30px;
-  margin-left: 30px;
+  margin-left: 580px;
   margin-top: 20px;
   padding: 15px;
 }
@@ -87,11 +82,4 @@ label {
 .tab {
   color: #fff;
   padding: 20px 80px;
-}
-.row {
-  font-size: 15px;
-  padding: 10px 80px;
-}
-.icon-tick {
-  width: 20px;
 }

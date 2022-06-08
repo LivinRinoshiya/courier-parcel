@@ -1,0 +1,81 @@
+.tab-row {
+  background-color: #f0273b;
+  width: 00px;
+}
+.confirm {
+  text-align: center;
+}
+.para {
+  text-align: center;
+}
+.btn1 {
+  background-color: #f0273b;
+  border: none;
+  color: #000;
+  margin-left: 500px;
+  padding: 15px;
+  width: 170px;
+}
+.btn1:hover {
+  transform: scale(1.09);
+}
+.btn2 {
+  background-color: #f0273b;
+  border: none;
+  color: #fff;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  padding: 15px;
+}
+.btn2:hover {
+  transform: scale(1.09);
+}
+
+.btn {
+  background-color: #f0273b;
+  color: #fff;
+  margin-left: 90px;
+  margin-top: 15px;
+}
+.btn:hover {
+  transform: scale(1.09);
+}
+.icon {
+  margin-left: 1100px;
+  width: 50px;
+}
+
+.tab {
+  color: #fff;
+  padding: 20px 80px;
+}
+.row {
+  font-size: 15px;
+  padding: 10px 80px;
+}
+.icon-tick {
+  width: 20px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pickup {
+  margin: 50px 220px;
+  background-color: #ddd;
+}
+
+caption {
+  text-align: center;
+}
+
+.btn1 {
+  background-color: #f0273b;
+  border: none;
+  padding: 20px;
+  width: 170px;
+  margin-left: 1100px;
+  margin-top: 20px;
+}

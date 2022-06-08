@@ -15,7 +15,6 @@ dbUserName='apikey-v2-23epskwaoah6sy6rvo29zejnn1k4kl1llrrq1ot36mry'
 dbPassword='69c1d2737d371d9f6b7f6009287e6ccc'
 basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
 test_get:any;
-storedata2:any;
   constructor(private http:HttpClient) {}
 
   storeData(formData: any) {
@@ -48,12 +47,18 @@ const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
     return this.http.get(link, { headers: { Authorization: basicAuth}});
   }
 
-  get1(data: any): Observable<{}> {
+  getUser(data: any): Observable<{}> {
     const url = this.url +'/courier-db/_find';
     return this.http.post( url,data, this.httpOptions)
 
-   
       }
+
+      getPrev(data: any): Observable<{}> {
+        const url = this.url +'/courier-db/_find';
+        return this.http.post( url,data, this.httpOptions)
+    
+       
+          }
     showOff(){
         this.hide = !this.hide;
         this.show = !this.show;

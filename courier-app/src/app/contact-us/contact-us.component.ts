@@ -29,7 +29,7 @@ export class ContactUsComponent implements OnInit {
   register(FormValue:any){
     console.log("from form",FormValue);
    
-   this.signUp.add3(FormValue).subscribe((data)=>{
+   this.signUp.addContact(FormValue).subscribe((data)=>{
    
     console.log("data returned from server",data);
     })

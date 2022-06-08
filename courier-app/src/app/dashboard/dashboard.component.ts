@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  this.pickUp.get1(data).subscribe(res => {
+  this.pickUp.getUser(data).subscribe(res => {
     this.allUser=res;
     console.log(res);
     this.allUser = this.allUser.docs;

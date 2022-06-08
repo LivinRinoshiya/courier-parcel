@@ -15,12 +15,9 @@ export class SignupFormService {
     console.log(formobject);
     return this.http.post("http://localhost:8000/signup",formobject);
   }
-  add1(formobject:any){
-    console.log(formobject);
-    return this.http.post("http://localhost:8000/feedback",formobject);
-  }
+ 
   
-  add3(formobject:any){
+  addContact(formobject:any){
     console.log(formobject);
     return this.http.post("http://localhost:8000/contact",formobject);
   }

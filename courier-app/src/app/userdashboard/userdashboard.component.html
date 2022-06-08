@@ -1,45 +1,15 @@
 <section>
+  <button class="btn1"><a href="user">Go to Dashboard</a></button>
+
   <div class="pickup-details">
     <h2>Congrats!!!</h2>
   </div>
   <h3 class="confirm">Your order has been placed!!!</h3>
-  <button class="btn1"><a href="signup">logout</a></button>
-  <button class="btn2"><a href="pickup">Create another order</a></button>
 
   <div class="order">
     <div class="image">
       <img class="success" src="../../images/success.png" alt="image" />
     </div>
-    <div class="containers">
-      <table class="pickup">
-        <caption>
-          Your Orders!!!
-        </caption>
-        <thead>
-          <tr class="tab-row">
-            <th class="tab">Pickup From</th>
-            <th class="tab">Pickup To</th>
-            <th class="tab">Date</th>
-            <th class="tab">Order Placed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of allUserData">
-            <td class="row">{{ user.fromplace }}</td>
-            <td class="row">{{ user.toplace }}</td>
-            <td class="row">{{ user.date }}</td>
-            <td>
-              <button class="btn">
-                <img
-                  class="icon-tick"
-                  src="../../images/icons8-double-tick-50.png"
-                  alt="icon"
-                />
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
+  <button class="btn2"><a href="pickup">Create another order</a></button>
 </section>

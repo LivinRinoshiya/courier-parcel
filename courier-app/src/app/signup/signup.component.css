@@ -5,7 +5,7 @@ section {
 .sign {
   display: flex;
   flex-direction: row;
-  background-color: #f7adb4;
+  background-color: #fff;
   border-radius: 15px;
   width: 900px;
   margin-left: 220px;
@@ -49,6 +49,7 @@ h1 {
   font-size: 20px;
   padding: 20px 0px;
   border-bottom: 1px solid #f0273b;
+  position: relative;
 }
 
 input {
@@ -96,4 +97,12 @@ input {
 a {
   color: #f0273b;
   text-decoration: none;
+}
+.text-danger {
+  color: #8d2927;
+  font-size: 13px;
+  position: absolute;
+}
+.log {
+  color: #fff;
 }
