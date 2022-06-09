@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -6,16 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './userdashboard.component.html',
   styleUrls: ['./userdashboard.component.css']
 })
-export class UserdashboardComponent implements OnInit {
+export class UserdashboardComponent  {
  
   constructor( ) { 
    console.log ("weight");
   }
 
-  ngOnInit(): void {
-   console.log ("weight");
 
-   }
 
    order=[{
      kg: 1,
