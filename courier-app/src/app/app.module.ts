@@ -23,7 +23,6 @@ import { HttpCallInterceptor } from './interceptor';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserComponent } from './user/user.component';
 import { PreviousordersComponent } from './previousorders/previousorders.component';
-import { PriceComponent } from './price/price.component';
 import { PricePipe } from './price.pipe';
 
 const routes: Routes =[
@@ -43,8 +42,6 @@ const routes: Routes =[
   {path: 'user',component:UserComponent},
   {path: 'previousorder',component:PreviousordersComponent}
 
-
-
 ];
 @NgModule({
   declarations: [
@@ -63,7 +60,6 @@ const routes: Routes =[
     AdmindashboardComponent,
     UserComponent,
     PreviousordersComponent,
-    PriceComponent,
     PricePipe,
   ],
   imports: [

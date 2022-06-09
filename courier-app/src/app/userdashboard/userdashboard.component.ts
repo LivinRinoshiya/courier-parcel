@@ -9,11 +9,13 @@ import { PickupService } from '../pickup.service';
 })
 export class UserdashboardComponent implements OnInit {
  
-  constructor(private pickUp:PickupService ) { 
-   
+  constructor( ) { 
+   console.log ("weight");
   }
 
   ngOnInit(): void {
+   console.log ("weight");
+
    }
 
    order=[{
