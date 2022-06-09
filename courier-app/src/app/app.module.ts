@@ -24,6 +24,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { UserComponent } from './user/user.component';
 import { PreviousordersComponent } from './previousorders/previousorders.component';
 import { PricePipe } from './price.pipe';
+import { ContactdashboardComponent } from './contactdashboard/contactdashboard.component';
 
 const routes: Routes =[
   {path: '', component: HomeComponent},
@@ -40,7 +41,9 @@ const routes: Routes =[
   {path: 'userdashboard', component: UserdashboardComponent},
   {path: 'admindashboard',component:AdmindashboardComponent},
   {path: 'user',component:UserComponent},
-  {path: 'previousorder',component:PreviousordersComponent}
+  {path: 'previousorder',component:PreviousordersComponent},
+  {path: 'contactboard',component:ContactdashboardComponent}
+
 
 ];
 @NgModule({
@@ -61,6 +64,7 @@ const routes: Routes =[
     UserComponent,
     PreviousordersComponent,
     PricePipe,
+    ContactdashboardComponent,
   ],
   imports: [
     BrowserModule,

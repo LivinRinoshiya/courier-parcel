@@ -12,8 +12,6 @@ export class UserdashboardComponent  {
    console.log ("weight");
   }
 
-
-
    order=[{
      kg: 1,
    }]

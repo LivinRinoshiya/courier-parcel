@@ -41,6 +41,8 @@ test_get:any;
     return this.http.post(url,doc,this.httpOptions)
   }
 
+  
+
 get(_db: any): Observable<{}> {
 const link = this.url + "/courier-db/_all_docs?include_docs=true";
 const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
@@ -53,6 +55,12 @@ const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
 
       }
 
+      getContact(data: any): Observable<{}> {
+        const url = this.url +'/courier-db/_find';
+        return this.http.post( url,data, this.httpOptions)
+    
+          }
+     
       getPrev(data: any): Observable<{}> {
         const url = this.url +'/courier-db/_find';
         return this.http.post( url,data, this.httpOptions)

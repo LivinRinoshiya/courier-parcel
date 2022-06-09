@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,Validators} from '@angular/forms';
-import { SignupFormService} from '../signup-form.service';
 import { HttpClient} from '@angular/common/http';  
+import { PickupService } from '../pickup.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,10 +9,20 @@ import { HttpClient} from '@angular/common/http';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-  successMessage:string ="";
   contactForm!: FormGroup; 
 
-  constructor(private fb:FormBuilder,private signUp:SignupFormService, private http:HttpClient) { }
+  userRecord: any = {
+    subject: '',
+    name: '',
+    mobile:'',
+    email:'',
+    city:'',
+    feedback:'',
+   
+
+   };
+  userData: any;
+  constructor(private fb:FormBuilder,private pickUp :PickupService, private http:HttpClient) { }
 
   ngOnInit(): void {
 
@@ -23,13 +33,30 @@ export class ContactUsComponent implements OnInit {
       email:['',[Validators.required, Validators.pattern("[A-Za-z0-9]*@gmail.com")]],
       place:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
       feedback:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z]+")]],
-
+      _id:[''],
+      _rev:['']
     })
   }
+
+  get subject() {return this.contactForm.get('subject')!;}
+  get name() {return this.contactForm.get('name')!;}
+  get mobile() {return this.contactForm.get('mobile')!;}
+  get email() {return this.contactForm.get('email')!;}
+  get place() {return this.contactForm.get('place')!;}
+  get feedback() {return this.contactForm.get('feedback')!;}
+
   register(FormValue:any){
+    const contact ={
+      subject: FormValue.subject,
+      name: FormValue.name,
+      mobile: FormValue.mobile,
+      email: FormValue.email,
+      place: FormValue.place,
+      feedback: FormValue.feedback,
+      type:"contact"
+       }
     console.log("from form",FormValue);
-   
-   this.signUp.addContact(FormValue).subscribe((data)=>{
+   this.pickUp.add('courier-db',contact).subscribe((data)=>{
    
     console.log("data returned from server",data);
     },err=>{

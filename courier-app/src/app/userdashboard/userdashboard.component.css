@@ -15,20 +15,22 @@ img {
 
 .order {
   display: flex;
-  margin: 50px 150px;
+  /* margin: 50px 150px; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 .btns {
   padding: 15px;
   color: #fff;
   background-color: #f0273b;
   border: none;
-  margin-left: -30px;
 }
 
 .no {
-  padding: 0 40px;
   font-size: 20px;
   text-align: center;
+  min-width: 40px;
 }
 
 .btn1 {
@@ -76,4 +78,20 @@ h3 {
 
 .head {
   text-align: center;
+}
+.minusandplus {
+  width: 40px;
+  height: 40px;
+}
+
+.minusandplus .btns {
+  padding: 15px;
+  color: #fff;
+  background-color: #f0273b;
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

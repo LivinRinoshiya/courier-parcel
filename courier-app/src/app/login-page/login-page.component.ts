@@ -29,7 +29,6 @@ export class LoginPageComponent implements OnInit {
       console.log("data returned from server",data);
       localStorage.clear();
       localStorage.setItem("userData",JSON.stringify(data['docs'][0]));
-      
        if(data.docs[0].email == Formvalue.email){
         this.header.showOff();
       this.router.navigate(['/user']);

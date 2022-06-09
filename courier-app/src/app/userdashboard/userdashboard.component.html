@@ -11,15 +11,15 @@
     <h3>(1 Kg = ₹ <span class="cost">100)</span></h3>
     <div *ngFor="let prd of order">
       <div class="order">
-        <div class="minus">
+        <div class="minusandplus">
           <button type="button" class="btns" (click)="dec(prd)">
             <em class="fa fa-minus"></em>
           </button>
         </div>
         <div class="no">
-          <p class="kilogram">{{ prd.kg }}</p>
+          {{ prd.kg }}
         </div>
-        <div class="plus">
+        <div class="minusandplus">
           <button type="button" class="btns" (click)="inc(prd)">
             <em class="fa fa-plus"></em>
           </button>

@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder,Validators} from '@angular/forms';
 import { PickupService } from '../pickup.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-pickup',
   templateUrl: './pickup.component.html',
@@ -19,13 +20,12 @@ export class PickupComponent implements OnInit {
     frompincode:'',
     topincode:'',
     price:''
-
    };
   userData: any;
    
   
   constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router) { 
-    const userData =  localStorage.getItem("userData");
+   const userData =  localStorage.getItem("userData");
    if(userData){
    this.userData = JSON.parse(userData);
    }

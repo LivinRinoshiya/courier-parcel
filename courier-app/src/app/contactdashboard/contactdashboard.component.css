@@ -1,0 +1,56 @@
+.head {
+  margin-left: 300px;
+  color: #f0273b;
+  padding: 20px;
+}
+.arrow {
+  width: 40px;
+}
+img {
+  padding-right: 10px;
+}
+.heading {
+  background-color: #ddd;
+
+  margin-top: -20px;
+}
+h2 {
+  color: #f0273b;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+}
+.containers {
+  margin-left: 100px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.pickup {
+  border: none;
+  width: 900px;
+  height: 300px;
+}
+caption {
+  text-align: center;
+  padding: 10px;
+}
+.dashboard {
+  display: flex;
+  flex-direction: row;
+}
+.tab {
+  background-color: #f0273b;
+  padding: 20px;
+  color: #fff;
+}
+.pickup tr {
+  border: #f0273b;
+}
+.row {
+  padding: 8px;
+}
+section {
+  min-height: 100vh;
+}
