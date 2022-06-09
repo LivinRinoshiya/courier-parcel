@@ -8,7 +8,6 @@
       <tr class="tab-row">
         <th class="tab">Pickup From</th>
         <th class="tab">Pickup To</th>
-        <th class="tab">Date</th>
         <th class="tab">Shipped</th>
       </tr>
     </thead>
@@ -16,7 +15,6 @@
       <tr *ngFor="let user of allUserData">
         <td class="row">{{ user.fromplace }}</td>
         <td class="row">{{ user.toplace }}</td>
-        <td class="row">{{ user.date }}</td>
 
         <td>
           <button class="btn">

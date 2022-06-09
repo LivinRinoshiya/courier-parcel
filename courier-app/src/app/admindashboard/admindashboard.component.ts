@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder} from '@angular/forms';
 import { PickupService } from '../pickup.service';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './admindashboard.component.html',
   styleUrls: ['./admindashboard.component.css']
 })
-export class AdmindashboardComponent implements OnInit {
+export class AdmindashboardComponent  {
   array:any=[];
   allUserData: any;
   allUser: any;
@@ -21,7 +21,5 @@ export class AdmindashboardComponent implements OnInit {
     this.parcelDetails = this.parcelRecord.map((x:any) => x.doc);
   });
 }
-  ngOnInit(): void {
-    console.log ('admin dashboard');
-  }
+  
 }

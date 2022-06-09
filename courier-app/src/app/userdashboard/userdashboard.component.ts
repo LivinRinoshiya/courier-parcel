@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PickupService } from '../pickup.service';
 
 
 @Component({
@@ -33,6 +32,7 @@ export class UserdashboardComponent implements OnInit {
   }
 
   total:number= 100;
+  
   
 
   }

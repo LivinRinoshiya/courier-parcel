@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PickupService } from '../pickup.service';
 import { Router } from '@angular/router';
 
@@ -7,14 +7,12 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
  
  
   constructor(public header: PickupService,private router: Router  ) { }
 
-  ngOnInit(): void {
-    console.log('header');
-  }
+  
   logOut(){
     this.header.hide=false;
     this.header.show=true;

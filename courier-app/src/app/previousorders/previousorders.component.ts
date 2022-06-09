@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PickupService } from '../pickup.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { PickupService } from '../pickup.service';
   templateUrl: './previousorders.component.html',
   styleUrls: ['./previousorders.component.css']
 })
-export class PreviousordersComponent implements OnInit {
+export class PreviousordersComponent  {
 
   array:any=[];
   allUserData: any;
@@ -23,9 +23,7 @@ export class PreviousordersComponent implements OnInit {
    this.register()  
   }
 
-  ngOnInit(): void {
-    console.log ('dashboard')
-  }
+ 
   register() {
     const data = {
       selector: {

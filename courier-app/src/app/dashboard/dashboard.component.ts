@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent  {
   array:any=[];
   allUserData: any;
   allUser: any;
@@ -21,9 +21,7 @@ export class DashboardComponent implements OnInit {
     
   
   }
-  ngOnInit(): void {
-    console.log('successfull')
-  }
+ 
   register() {
     const data = {
       selector: {
