@@ -17,15 +17,18 @@
   color: #ca303f;
   margin-top: -20px;
 }
+.btns {
+  display: flex;
+}
 .btn {
   background-color: #ca303f;
   border: 1px solid #ffff;
   color: white;
   cursor: pointer;
-  margin: 30px 125px;
   opacity: 0.9;
+  margin: 40px;
   padding: 15px 15px;
-  width: 300px;
+  width: 200px;
 }
 .btn:hover {
   opacity: 1;

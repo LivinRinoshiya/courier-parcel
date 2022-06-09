@@ -16,7 +16,9 @@ export class PickupComponent implements OnInit {
     mobile: '',
     fromplace:'',
     toplace:'',
-    date:'',
+    frompincode:'',
+    topincode:'',
+
    };
   userData: any;
    
@@ -31,7 +33,8 @@ export class PickupComponent implements OnInit {
       mobile: [this.userRecord.mobile],
       fromplace: [this.userRecord.fromplace],
       toplace: [this.userRecord.toplace],
-      date: [this.userRecord.date],
+      frompincode: [this.userRecord.frompincode],
+      topincode: [this.userRecord.topincode],
       _id:[''],
       _rev:['']
     });
@@ -42,7 +45,8 @@ export class PickupComponent implements OnInit {
       mobile:['',[Validators.required,Validators.pattern("[0-9]{10}$")]],
       fromplace:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
       toplace:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
-      date:['',[Validators.required]],
+      frompincode:['',[Validators.required,Validators.pattern("[0-9]{6}$")]],
+      topincode:['',[Validators.required,Validators.pattern("[0-9]{6}$")]],
     });
 
     }
@@ -50,10 +54,10 @@ export class PickupComponent implements OnInit {
     
     get name() {return this.pickUpForm.get('name')!;}
     get mobile() {return this.pickUpForm.get('mobile')!;}
-    get fromdata() {return this.pickUpForm.get('fromdata')!;}
-    get todata() {return this.pickUpForm.get('todata')!;}
-    get date() {return this.pickUpForm.get('date')!;}
-  
+    get fromplace() {return this.pickUpForm.get('fromplace')!;}
+    get toplace() {return this.pickUpForm.get('toplace')!;}
+    get frompincode() {return this.pickUpForm.get('frompincode')!;}
+    get topincode() {return this.pickUpForm.get('topincode')!;}
       register(Formvalue: any) {
         const pickUp ={
           name: Formvalue.name,
@@ -61,7 +65,8 @@ export class PickupComponent implements OnInit {
           fromplace: Formvalue.fromplace,
           toplace: Formvalue.toplace,
           email:this.userData.email,
-          date: Formvalue.date,
+          frompincode: Formvalue.frompincode,
+          topincode: Formvalue.topincode,
           type:"pickup"
            }
            

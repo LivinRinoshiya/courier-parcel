@@ -71,9 +71,10 @@
             <th class="tab">Name</th>
             <th class="tab">Email</th>
             <th class="tab">Mobile Number</th>
-            <th class="tab">Pickup From</th>
-            <th class="tab">Pickup To</th>
-            <th class="tab">Date</th>
+            <th class="tab">Pickup</th>
+            <th class="tab">Deliver</th>
+            <th class="tab">Pickup pin</th>
+            <th class="tab">Deliver pin</th>
           </tr>
         </thead>
         <br />
@@ -84,7 +85,8 @@
             <td class="row">{{ user.mobile }}</td>
             <td class="row">{{ user.fromplace }}</td>
             <td class="row">{{ user.toplace }}</td>
-            <td class="row">{{ user.date }}</td>
+            <td class="row">{{ user.frompincode }}</td>
+            <td class="row">{{ user.topincode }}</td>
           </tr>
         </tbody>
       </table>
