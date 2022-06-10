@@ -19,7 +19,6 @@ export class PickupComponent implements OnInit {
     toplace:'',
     frompincode:'',
     topincode:'',
-    price:''
    };
   userData: any;
    
@@ -49,7 +48,6 @@ export class PickupComponent implements OnInit {
       toplace:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
       frompincode:['',[Validators.required,Validators.pattern("[0-9]{6}$")]],
       topincode:['',[Validators.required,Validators.pattern("[0-9]{6}$")]],
-      price:['']
       
     });
 
@@ -62,7 +60,6 @@ export class PickupComponent implements OnInit {
     get toplace() {return this.pickUpForm.get('toplace')!;}
     get frompincode() {return this.pickUpForm.get('frompincode')!;}
     get topincode() {return this.pickUpForm.get('topincode')!;}
-    get price() {return this.pickUpForm.get('price')!;}
 
       register(Formvalue: any) {
         const pickUp ={
@@ -73,7 +70,6 @@ export class PickupComponent implements OnInit {
           email:this.userData.email,
           frompincode: Formvalue.frompincode,
           topincode: Formvalue.topincode,
-          price: Formvalue.price,
           type:"pickup"
            }
            

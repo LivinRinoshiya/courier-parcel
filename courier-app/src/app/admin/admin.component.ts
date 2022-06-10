@@ -12,13 +12,11 @@ import { ToastrService } from 'ngx-toastr';
 export class AdminComponent implements OnInit {
   adminForm!: FormGroup; 
   constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private toast:ToastrService) { }
-
   ngOnInit(): void {
     this.adminForm = this.fb.group({
       email:['',[Validators.required, Validators.pattern("[A-Za-z0-9]*@gmail.com")]],
       password:['',[Validators.required,Validators.pattern("[A-Za-z0-9@!_]{6,}")]],
     })
-    
   }
   login(Formvalue:any)
   {

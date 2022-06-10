@@ -38,29 +38,14 @@
           >
         </div>
 
-        <div class="form-group">
-          <em class="fa fa-lock"></em>
-          <label for="confirmpassword"></label>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            formControlName="confirmpassword"
-          />
-          <span
-            class="text-danger"
-            *ngIf="
-              loginForm.controls.confirmpassword.errors &&
-              loginForm.controls.confirmpassword.touched
-            "
-            ><br />Invalid Password</span
-          >
-        </div>
         <div class="signup">
           <label for="signup"
             >Already have an Account? <a href="login-page">Login</a></label
           >
         </div>
-
+        <div class="text-center text-success" *ngIf="successMessage">
+          {{ successMessage }}
+        </div>
         <div class="text-center">
           <button
             id="submitButton"

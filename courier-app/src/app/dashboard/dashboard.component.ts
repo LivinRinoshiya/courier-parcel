@@ -14,8 +14,7 @@ export class DashboardComponent  {
   allUserData: any;
   allUser: any;
   data:any;
-  parcelRecord: any;
-  parceldetails: any =[];
+
   constructor(private fb:FormBuilder,private pickUp:PickupService,private router:Router ) { 
  this.register()
     

@@ -17,31 +17,18 @@ basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
 test_get:any;
   constructor(private http:HttpClient) {}
 
-  storeData(formData: any) {
-    console.log("From api", formData);
-    let data ={
-      "name": formData['name'],
-      "email": formData['email'],
-      "mobile": formData['mobile'],
-      "fromplace": formData['fromplace'],
-      "toplace":formData['toplace'] ,
-      "date": formData['date'],
-      "type": "pickup",
-  }
-    return this.http.post<any>(this.url +'courier-db',data,this.httpOptions)
-  }
+  
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': this.basicAuth
     })
   };
+
   add(db: string ,doc: object): Observable<{}> {
     const url = this.url +'/'+ db;
     return this.http.post(url,doc,this.httpOptions)
   }
-
-  
 
 get(_db: any): Observable<{}> {
 const link = this.url + "/courier-db/_all_docs?include_docs=true";
@@ -49,11 +36,11 @@ const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
     return this.http.get(link, { headers: { Authorization: basicAuth}});
   }
 
-  getUser(data: any): Observable<{}> {
+getUser(data: any): Observable<{}> {
     const url = this.url +'/courier-db/_find';
     return this.http.post( url,data, this.httpOptions)
 
-      }
+}
 
     showOff(){
         this.hide = !this.hide;
