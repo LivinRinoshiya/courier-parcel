@@ -16,12 +16,12 @@ export class SignupFormService {
     return this.http.post("http://localhost:8000/signup",formobject);
   }
  
-  test_get(id:any)
+  user(id:any)
   {
     return this.http.get<any>('http://localhost:8000/getlogin/'+id);
 
   }
-  admin_get(id:any)
+  admin(id:any)
   {
     return this.http.get<any>('http://localhost:8000/getadmin/'+id);
 

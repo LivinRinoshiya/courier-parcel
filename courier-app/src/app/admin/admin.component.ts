@@ -22,12 +22,10 @@ export class AdminComponent implements OnInit {
   }
   login(Formvalue:any)
   {
-      this.signUp.admin_get(Formvalue.email).subscribe((data)=>{
+      this.signUp.admin(Formvalue.email).subscribe((data)=>{
       console.log("data returned from server",data);
-       
       if(data.docs[0].email == Formvalue.email){
       this.router.navigate(['/dashboard']);
- 
       this.toast.success('login successfully');
        }
      })

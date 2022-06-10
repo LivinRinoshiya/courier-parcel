@@ -26,7 +26,7 @@ export class LoginPageComponent implements OnInit {
   login(Formvalue:any)
  {
     console.log(Formvalue.email);
-    this.signUp.test_get(Formvalue.email).subscribe((data)=>{
+    this.signUp.user(Formvalue.email).subscribe((data)=>{
       console.log("data returned from server",data);
       localStorage.clear();
       localStorage.setItem("userData",JSON.stringify(data['docs'][0]));
