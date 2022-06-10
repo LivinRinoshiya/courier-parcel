@@ -1,6 +1,9 @@
 .tab-row {
   background-color: #f0273b;
 }
+h1 {
+  text-align: center;
+}
 .confirm {
   text-align: center;
 }
@@ -62,7 +65,7 @@ a {
 }
 
 .pickup {
-  margin: 50px 220px;
+  margin: 50px 300px;
   background-color: #ddd;
 }
 

@@ -34,7 +34,9 @@ h2 {
 }
 caption {
   text-align: center;
-  padding: 10px;
+  padding: 30px;
+  font-size: 20px;
+  color: #000;
 }
 .dashboard {
   display: flex;
