@@ -12,7 +12,6 @@ import { ToastrService } from 'ngx-toastr';
 export class SignupComponent implements OnInit {
   
   loginForm!: FormGroup; 
-  successMessage:string ="";
   constructor(private fb:FormBuilder,private signUp:SignupFormService, private router:Router, private toast:ToastrService) { 
   }
 

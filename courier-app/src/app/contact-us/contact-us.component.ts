@@ -31,7 +31,7 @@ export class ContactUsComponent implements OnInit {
       mobile:['',[Validators.required,Validators.pattern("[0-9]{10}$")]],
       email:['',[Validators.required, Validators.pattern("[A-Za-z0-9]*@gmail.com")]],
       place:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ]+")]],
-      feedback:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z]+")]],
+      feedback:['',[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z]")]],
       _id:[''],
       _rev:['']
     })
