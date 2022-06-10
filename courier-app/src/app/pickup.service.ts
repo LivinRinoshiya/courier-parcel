@@ -55,18 +55,6 @@ const basicAuth = 'Basic ' + btoa(this.dbUserName + ':' + this.dbPassword);
 
       }
 
-      getContact(data: any): Observable<{}> {
-        const url = this.url +'/courier-db/_find';
-        return this.http.post( url,data, this.httpOptions)
-    
-          }
-     
-      getPrev(data: any): Observable<{}> {
-        const url = this.url +'/courier-db/_find';
-        return this.http.post( url,data, this.httpOptions)
-    
-       
-          }
     showOff(){
         this.hide = !this.hide;
         this.show = !this.show;

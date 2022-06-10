@@ -1,28 +1,27 @@
-<div class="containers">
-  <table class="pickup">
-    <caption>
-      Customer Orders!!!
-    </caption>
-    <thead>
-      <tr class="tab-row">
-        <th class="tab">Subject</th>
-        <th class="tab">Name</th>
-        <th class="tab">Mobile Number</th>
-        <th class="tab">Email</th>
-        <th class="tab">City</th>
-        <th class="tab">Feedback</th>
-      </tr>
-    </thead>
-    <br />
-    <tbody>
-      <tr *ngFor="let user of allUserData">
-        <td class="row">{{ user.subject }}</td>
-        <td class="row">{{ user.name }}</td>
-        <td class="row">{{ user.mobile }}</td>
-        <td class="row">{{ user.email }}</td>
-        <td class="row">{{ user.place }}</td>
-        <td class="row">{{ user.feedback }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<h1></h1>
+<table class="pickup">
+  <caption>
+    Customer Orders!!!
+  </caption>
+  <thead>
+    <tr class="tab-row">
+      <th class="tab">Subject</th>
+      <th class="tab">Name</th>
+      <th class="tab">Mobile Number</th>
+      <th class="tab">Email</th>
+      <th class="tab">City</th>
+      <th class="tab">Feedback</th>
+    </tr>
+  </thead>
+  <br />
+  <tbody>
+    <tr *ngFor="let user of allUserData">
+      <td class="row">{{ user.subject }}</td>
+      <td class="row">{{ user.name }}</td>
+      <td class="row">{{ user.mobile }}</td>
+      <td class="row">{{ user.email }}</td>
+      <td class="row">{{ user.place }}</td>
+      <td class="row">{{ user.feedback }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -3,7 +3,8 @@ import { FormGroup, FormBuilder,Validators} from '@angular/forms';
 import { SignupFormService} from '../signup-form.service';
 import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
-import { PickupService } from '../pickup.service';
+import { PickupService } from '../pickup.service'; 
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login-page',
@@ -12,7 +13,7 @@ import { PickupService } from '../pickup.service';
 })
 export class LoginPageComponent implements OnInit {
   loginForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private http:HttpClient, private header:PickupService) { }
+  constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private http:HttpClient, private header:PickupService, private toast:ToastrService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -33,7 +34,7 @@ export class LoginPageComponent implements OnInit {
         this.header.showOff();
       this.router.navigate(['/user']);
 
-      alert("data verified");
+      this.toast.success('login successfull');
       }
     },err=>{
       console.error("unable to return data",err);

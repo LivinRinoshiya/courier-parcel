@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,Validators} from '@angular/forms';
-import { HttpClient} from '@angular/common/http';  
 import { PickupService } from '../pickup.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,19 +10,18 @@ import { PickupService } from '../pickup.service';
 })
 export class ContactUsComponent implements OnInit {
   contactForm!: FormGroup; 
-
   userRecord: any = {
     subject: '',
     name: '',
     mobile:'',
     email:'',
-    city:'',
+    place:'',
     feedback:'',
    
 
    };
   userData: any;
-  constructor(private fb:FormBuilder,private pickUp :PickupService, private http:HttpClient) { }
+  constructor(private fb:FormBuilder,private pickUp :PickupService, private toast : ToastrService) { }
 
   ngOnInit(): void {
 
@@ -56,9 +55,9 @@ export class ContactUsComponent implements OnInit {
       type:"contact"
        }
     console.log("from form",FormValue);
-   this.pickUp.add('courier-db',contact).subscribe((data)=>{
-   
+    this.pickUp.add('courier-db',contact).subscribe((data)=>{
     console.log("data returned from server",data);
+    this.toast.success('submitted successfully');
     },err=>{
       console.error("unable to return data",err);
     })

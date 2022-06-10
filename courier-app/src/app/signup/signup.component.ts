@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,Validators} from '@angular/forms';
 import { SignupFormService} from '../signup-form.service';
 import { Router } from '@angular/router';
-
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
   
   successMessage:string ="";
   loginForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signUp:SignupFormService, private router:Router) { 
+  constructor(private fb:FormBuilder,private signUp:SignupFormService, private router:Router, private toast:ToastrService) { 
 
 
   }
@@ -33,6 +33,7 @@ export class SignupComponent implements OnInit {
      
      this.signUp.add(FormValue).subscribe((data)=>{
       console.log("data returned from server",data);
+      this.toast.success('signed in successfully');
       this.router.navigate(['/login-page']);
       
       },err=>{

@@ -20,17 +20,13 @@ h2 {
   text-align: center;
   padding: 20px;
 }
-.containers {
-  margin-left: 100px;
-  background-color: #ddd;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
 
 .pickup {
   border: none;
-  width: 900px;
+  width: 600px;
   height: 300px;
+  background-color: #ddd;
+  margin: 50px 400px;
 }
 caption {
   text-align: center;

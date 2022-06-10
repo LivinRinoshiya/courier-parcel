@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,Validators} from '@angular/forms';
 import { SignupFormService} from '../signup-form.service';
-import { HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
   adminForm!: FormGroup; 
-  constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private http:HttpClient) { }
+  constructor(private fb:FormBuilder,private signUp:SignupFormService,private router:Router, private toast:ToastrService) { }
 
   ngOnInit(): void {
     this.adminForm = this.fb.group({
@@ -21,15 +22,13 @@ export class AdminComponent implements OnInit {
   }
   login(Formvalue:any)
   {
-     console.log(Formvalue.email);
-     this.signUp.admin_get(Formvalue.email).subscribe((data)=>{
-       console.log("data returned from server",data);
+      this.signUp.admin_get(Formvalue.email).subscribe((data)=>{
+      console.log("data returned from server",data);
        
-        if(data.docs[0].email == Formvalue.email){
-       this.router.navigate(['/dashboard']);
+      if(data.docs[0].email == Formvalue.email){
+      this.router.navigate(['/dashboard']);
  
-       alert("data verified");
-
+      this.toast.success('login successfully');
        }
      })
    }
